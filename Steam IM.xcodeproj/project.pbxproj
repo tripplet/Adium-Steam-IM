@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B1DDB0F15D8595700FA3B0E /* ESPurpleSteamAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DDB0C15D8595700FA3B0E /* ESPurpleSteamAccount.m */; };
+		3B1DDB1015D8595700FA3B0E /* ESSteamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */; };
+		3B28C0FA15D850250029F712 /* libjson-glib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C0F915D850250029F712 /* libjson-glib.framework */; };
+		3B28C10015D851660029F712 /* libintl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C0FF15D851660029F712 /* libintl.framework */; };
+		3B28C10315D851B20029F712 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C10115D851B20029F712 /* steam_connection.c */; };
+		3B28C10515D8528B0029F712 /* libgobject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C10415D8528B0029F712 /* libgobject.framework */; };
+		3B2B72E5162B9023009DC257 /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2B72E4162B9023009DC257 /* libpurple.framework */; };
+		3B2B72E7162B9145009DC257 /* libglib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2B72E6162B9145009DC257 /* libglib.framework */; };
+		3B4B0C7715D9D4E2002A4B1D /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */; };
+		3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */; };
+		3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */; };
+		3B56D1AB15DCBF0600E6329F /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B56D1AA15DCBF0600E6329F /* libsteam.c */; };
+		3B6A04F015D835AB0024F0D9 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A04EF15D835AB0024F0D9 /* Adium.framework */; };
+		3B6A04F315D8385C0024F0D9 /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */; };
+		3BC5C6DD15D879BC0097D6A3 /* steam_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5C6DB15D879BC0097D6A3 /* steam_small.png */; };
+		3BC5C6DE15D879BC0097D6A3 /* steam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5C6DC15D879BC0097D6A3 /* steam.png */; };
+		3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF9F8FC15D5E31E00322064 /* Foundation.framework */; };
+		3BF9F90515D5E31E00322064 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BF9F90315D5E31E00322064 /* InfoPlist.strings */; };
+		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B1DDB0C15D8595700FA3B0E /* ESPurpleSteamAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPurpleSteamAccount.m; sourceTree = "<group>"; };
+		3B1DDB0D15D8595700FA3B0E /* ESSteamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSteamService.h; sourceTree = "<group>"; };
+		3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSteamService.m; sourceTree = "<group>"; };
+		3B28C0F315D84E630029F712 /* libsteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteam.h; path = "opensteamworks/steam-mobile/libsteam.h"; sourceTree = SOURCE_ROOT; };
+		3B28C0F915D850250029F712 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "adium-1.5.2/Frameworks/libjson-glib.framework"; sourceTree = "<group>"; };
+		3B28C0FF15D851660029F712 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = "adium-1.5.2/Frameworks/libintl.framework"; sourceTree = "<group>"; };
+		3B28C10115D851B20029F712 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = SOURCE_ROOT; };
+		3B28C10215D851B20029F712 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = SOURCE_ROOT; };
+		3B28C10415D8528B0029F712 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = "adium-1.5.2/Frameworks/libgobject.framework"; sourceTree = "<group>"; };
+		3B2B72E4162B9023009DC257 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
+		3B2B72E6162B9145009DC257 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libglib.framework; sourceTree = "<group>"; };
+		3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
+		3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3B4BC5C215D8DA7400FB6876 /* Steam IM.AdiumLibpurplePlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Steam IM.AdiumLibpurplePlugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B56D1AA15DCBF0600E6329F /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/steam-mobile/libsteam.c"; sourceTree = SOURCE_ROOT; };
+		3B6A04EF15D835AB0024F0D9 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdiumLibpurple.framework; sourceTree = "<group>"; };
+		3B80170315D8CDDB00DA623D /* ESPurpleSteamAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPurpleSteamAccount.h; sourceTree = "<group>"; };
+		3BC5C6DB15D879BC0097D6A3 /* steam_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steam_small.png; sourceTree = "<group>"; };
+		3BC5C6DC15D879BC0097D6A3 /* steam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steam.png; sourceTree = "<group>"; };
+		3BF9F8FC15D5E31E00322064 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3BF9F90215D5E31E00322064 /* Steam IM-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Steam IM-Info.plist"; sourceTree = "<group>"; };
+		3BF9F90415D5E31E00322064 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BF9F90615D5E31E00322064 /* Steam IM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Steam IM-Prefix.pch"; sourceTree = "<group>"; };
+		3BF9F90715D5E31E00322064 /* AISteamPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISteamPlugin.h; sourceTree = "<group>"; };
+		3BF9F90815D5E31E00322064 /* AISteamPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISteamPlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BF9F8F615D5E31E00322064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */,
+				3B6A04F015D835AB0024F0D9 /* Adium.framework in Frameworks */,
+				3B6A04F315D8385C0024F0D9 /* AdiumLibpurple.framework in Frameworks */,
+				3B28C0FA15D850250029F712 /* libjson-glib.framework in Frameworks */,
+				3B28C10015D851660029F712 /* libintl.framework in Frameworks */,
+				3B28C10515D8528B0029F712 /* libgobject.framework in Frameworks */,
+				3B4B0C7715D9D4E2002A4B1D /* AIUtilities.framework in Frameworks */,
+				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
+				3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */,
+				3B2B72E5162B9023009DC257 /* libpurple.framework in Frameworks */,
+				3B2B72E7162B9145009DC257 /* libglib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B4BC5C815D8DA8100FB6876 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B4BC5C215D8DA7400FB6876 /* Steam IM.AdiumLibpurplePlugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BF9F8EE15D5E31E00322064 = {
+			isa = PBXGroup;
+			children = (
+				3BF9F90015D5E31E00322064 /* Steam IM */,
+				3BF9F8FB15D5E31E00322064 /* Frameworks */,
+				3B4BC5C815D8DA8100FB6876 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BF9F8FB15D5E31E00322064 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B2B72E6162B9145009DC257 /* libglib.framework */,
+				3B2B72E4162B9023009DC257 /* libpurple.framework */,
+				3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */,
+				3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */,
+				3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */,
+				3B28C10415D8528B0029F712 /* libgobject.framework */,
+				3B28C0FF15D851660029F712 /* libintl.framework */,
+				3B28C0F915D850250029F712 /* libjson-glib.framework */,
+				3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */,
+				3B6A04EF15D835AB0024F0D9 /* Adium.framework */,
+				3BF9F8FC15D5E31E00322064 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BF9F90015D5E31E00322064 /* Steam IM */ = {
+			isa = PBXGroup;
+			children = (
+				3BF9F90715D5E31E00322064 /* AISteamPlugin.h */,
+				3BF9F90815D5E31E00322064 /* AISteamPlugin.m */,
+				3B80170315D8CDDB00DA623D /* ESPurpleSteamAccount.h */,
+				3B1DDB0C15D8595700FA3B0E /* ESPurpleSteamAccount.m */,
+				3B1DDB0D15D8595700FA3B0E /* ESSteamService.h */,
+				3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */,
+				3B28C0F315D84E630029F712 /* libsteam.h */,
+				3B56D1AA15DCBF0600E6329F /* libsteam.c */,
+				3B28C10115D851B20029F712 /* steam_connection.c */,
+				3B28C10215D851B20029F712 /* steam_connection.h */,
+				3BF9F90115D5E31E00322064 /* Supporting Files */,
+			);
+			path = "Steam IM";
+			sourceTree = "<group>";
+		};
+		3BF9F90115D5E31E00322064 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BC5C6DB15D879BC0097D6A3 /* steam_small.png */,
+				3BC5C6DC15D879BC0097D6A3 /* steam.png */,
+				3BF9F90215D5E31E00322064 /* Steam IM-Info.plist */,
+				3BF9F90315D5E31E00322064 /* InfoPlist.strings */,
+				3BF9F90615D5E31E00322064 /* Steam IM-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BF9F8F815D5E31E00322064 /* Steam IM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BF9F90C15D5E31E00322064 /* Build configuration list for PBXNativeTarget "Steam IM" */;
+			buildPhases = (
+				3BF9F8F515D5E31E00322064 /* Sources */,
+				3BF9F8F615D5E31E00322064 /* Frameworks */,
+				3BF9F8F715D5E31E00322064 /* Resources */,
+				3BC62953162CDDB60054EC5B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Steam IM";
+			productName = "Steam IM";
+			productReference = 3B4BC5C215D8DA7400FB6876 /* Steam IM.AdiumLibpurplePlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BF9F8F015D5E31E00322064 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = Hermi;
+			};
+			buildConfigurationList = 3BF9F8F315D5E31E00322064 /* Build configuration list for PBXProject "Steam IM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3BF9F8EE15D5E31E00322064;
+			productRefGroup = 3BF9F8EE15D5E31E00322064;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BF9F8F815D5E31E00322064 /* Steam IM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BF9F8F715D5E31E00322064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF9F90515D5E31E00322064 /* InfoPlist.strings in Resources */,
+				3BC5C6DD15D879BC0097D6A3 /* steam_small.png in Resources */,
+				3BC5C6DE15D879BC0097D6A3 /* steam.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BC62953162CDDB60054EC5B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "exe=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\ninstall_name_tool -change @executable_path/../Frameworks/Adium.framework/Versions/A/Adium @executable_path/../Frameworks/Adium.framework/Versions/Current/Adium \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/AdiumLibpurple.framework/Versions/A/AdiumLibpurple @executable_path/../Frameworks/AdiumLibpurple.framework/Versions/Current/AdiumLibpurple \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libjson-glib.framework/Versions/1.0.0/libjson-glib @executable_path/../Frameworks/libjson-glib.framework/Versions/Current/libjson-glib \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libintl.framework/Versions/8/libintl @executable_path/../Frameworks/libintl.framework/Versions/Current/libintl \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libgobject.framework/Versions/2.0.0/libgobject @executable_path/../Frameworks/libgobject.framework/Versions/Current/libgobject \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libpurple.framework/Versions/0.10.5/libpurple @executable_path/../Frameworks/libpurple.framework/Versions/Current/libpurple \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libglib.framework/Versions/2.0.0/libglib @executable_path/../Frameworks/libglib.framework/Versions/Current/libglib \"$exe\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BF9F8F515D5E31E00322064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */,
+				3B28C10315D851B20029F712 /* steam_connection.c in Sources */,
+				3B1DDB0F15D8595700FA3B0E /* ESPurpleSteamAccount.m in Sources */,
+				3B1DDB1015D8595700FA3B0E /* ESSteamService.m in Sources */,
+				3B56D1AB15DCBF0600E6329F /* libsteam.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BF9F90315D5E31E00322064 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BF9F90415D5E31E00322064 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BF9F90A15D5E31E00322064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		3BF9F90B15D5E31E00322064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		3BF9F90D15D5E31E00322064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks\"",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/adium-1.5.2/Source/\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libglib.framework/Versions/Current/Headers\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libintl.framework/Versions/Current/Headers\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libjson-glib.framework/Versions/Current/Headers\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libpurple.framework/Versions/Current/Headers\"",
+				);
+				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = "Steam IM";
+				WRAPPER_EXTENSION = AdiumLibpurplePlugin;
+			};
+			name = Debug;
+		};
+		3BF9F90E15D5E31E00322064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks\"",
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/adium-1.5.2/Source/\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libglib.framework/Versions/Current/Headers\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libintl.framework/Versions/Current/Headers\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libjson-glib.framework/Versions/Current/Headers\"",
+					"\"$(SRCROOT)/adium-1.5.2/Frameworks/libpurple.framework/Versions/Current/Headers\"",
+				);
+				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
+				OTHER_LDFLAGS = "-lz";
+				PRODUCT_NAME = "Steam IM";
+				WRAPPER_EXTENSION = AdiumLibpurplePlugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BF9F8F315D5E31E00322064 /* Build configuration list for PBXProject "Steam IM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF9F90A15D5E31E00322064 /* Debug */,
+				3BF9F90B15D5E31E00322064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BF9F90C15D5E31E00322064 /* Build configuration list for PBXNativeTarget "Steam IM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF9F90D15D5E31E00322064 /* Debug */,
+				3BF9F90E15D5E31E00322064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BF9F8F015D5E31E00322064 /* Project object */;
+}

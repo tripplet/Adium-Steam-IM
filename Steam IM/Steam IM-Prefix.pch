@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Steam IM' target in the 'Steam IM' project
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+#endif
