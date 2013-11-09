@@ -89,28 +89,45 @@ static gchar *steam_gunzip(const guchar *gzip_data, gssize *len_ptr)
 	return g_string_free(output_string, FALSE);
 }
 
-void steam_connection_destroy(SteamConnection *steamcon)
+void
+steam_connection_close(SteamConnection *steamcon)
 {
 	steamcon->sa->conns = g_slist_remove(steamcon->sa->conns, steamcon);
-
-	if (steamcon->request != NULL)
-		g_string_free(steamcon->request, TRUE);
-
-	g_free(steamcon->rx_buf);
-
-	if (steamcon->connect_data != NULL)
+	
+	if (steamcon->connect_data != NULL) {
 		purple_proxy_connect_cancel(steamcon->connect_data);
+		steamcon->connect_data = NULL;
+	}
 
-	if (steamcon->ssl_conn != NULL)
+	if (steamcon->ssl_conn != NULL) {
 		purple_ssl_close(steamcon->ssl_conn);
+		steamcon->ssl_conn = NULL;
+	}
 
 	if (steamcon->fd >= 0) {
 		close(steamcon->fd);
+		steamcon->fd = -1;
 	}
 
-	if (steamcon->input_watcher > 0)
+	if (steamcon->input_watcher > 0) {
 		purple_input_remove(steamcon->input_watcher);
+		steamcon->input_watcher = 0;
+	}
+	
+	purple_timeout_remove(steamcon->timeout_watcher);
+	
+	g_free(steamcon->rx_buf);
+	steamcon->rx_buf = NULL;
+	steamcon->rx_len = 0;
+}
 
+void steam_connection_destroy(SteamConnection *steamcon)
+{
+	steam_connection_close(steamcon);
+	
+	if (steamcon->request != NULL)
+		g_string_free(steamcon->request, TRUE);
+	
 	g_free(steamcon->url);
 	g_free(steamcon->hostname);
 	g_free(steamcon);
@@ -272,8 +289,17 @@ static void steam_post_or_get_readdata_cb(gpointer data, gint source,
 			purple_debug_warning("steam",
 				"ssl error, but data received.  attempting to continue\n");
 		} else {
-			/* TODO: Is this a regular occurrence?  If so then maybe resend the request? */
-			steam_fatal_connection_cb(steamcon);
+			/* Try resend the request */
+			steamcon->retry_count++;
+			if (steamcon->retry_count < 3) {
+				steam_connection_close(steamcon);
+				steamcon->request_time = time(NULL);
+				
+				g_queue_push_head(sa->waiting_conns, steamcon);
+				steam_next_connection(sa);
+			} else {
+				steam_fatal_connection_cb(steamcon);
+			}
 			return;
 		}
 	}
@@ -443,11 +469,23 @@ static void steam_ssl_connection_error(PurpleSslConnection *ssl,
 		PurpleSslErrorType errortype, gpointer data)
 {
 	SteamConnection *steamcon = data;
-	PurpleConnection *pc = steamcon->sa->pc;
-
+	SteamAccount *sa = steamcon->sa;
+	PurpleConnection *pc = sa->pc;
+	
 	steamcon->ssl_conn = NULL;
-	steam_connection_destroy(steamcon);
-	purple_connection_ssl_error(pc, errortype);
+	
+	/* Try resend the request */
+	steamcon->retry_count++;
+	if (steamcon->retry_count < 3) {
+		steam_connection_close(steamcon);
+		steamcon->request_time = time(NULL);
+		
+		g_queue_push_head(sa->waiting_conns, steamcon);
+		steam_next_connection(sa);
+	} else {
+		steam_connection_destroy(steamcon);
+		purple_connection_ssl_error(pc, errortype);
+	}
 }
 
 void steam_post_or_get(SteamAccount *sa, SteamMethod method,
@@ -497,7 +535,7 @@ void steam_post_or_get(SteamAccount *sa, SteamMethod method,
 	}
 
 	cookies = steam_cookies_to_string(sa);
-	user_agent = purple_account_get_string(sa->account, "user-agent", "Steam 1291812 / iPhone");
+	user_agent = purple_account_get_string(sa->account, "user-agent", "Steam 1.2.0 / iPhone");
 	
 	if (method & STEAM_METHOD_POST && !postdata)
 		postdata = "";
@@ -590,6 +628,28 @@ static void steam_next_connection(SteamAccount *sa)
 	}
 }
 
+
+static gboolean
+steam_connection_timedout(gpointer userdata)
+{
+	SteamConnection *steamcon = userdata;
+	SteamAccount *sa = steamcon->sa;
+	
+	/* Try resend the request */
+	steamcon->retry_count++;
+	if (steamcon->retry_count < 3) {
+		steam_connection_close(steamcon);
+		steamcon->request_time = time(NULL);
+		
+		g_queue_push_head(sa->waiting_conns, steamcon);
+		steam_next_connection(sa);
+	} else {
+		steam_fatal_connection_cb(steamcon);
+	}
+	
+	return FALSE;
+}
+
 static void steam_attempt_connection(SteamConnection *steamcon)
 {
 	gboolean is_proxy = FALSE;
@@ -679,6 +739,8 @@ static void steam_attempt_connection(SteamConnection *steamcon)
 		steamcon->connect_data = purple_proxy_connect(NULL, sa->account,
 				steamcon->hostname, 80, steam_post_or_get_connect_cb, steamcon);
 	}
+	
+	steamcon->timeout_watcher = purple_timeout_add_seconds(120, steam_connection_timedout, steamcon);
 
 	return;
 }

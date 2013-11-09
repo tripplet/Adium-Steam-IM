@@ -45,12 +45,14 @@
 
 #include "accountopt.h"
 #include "blist.h"
+#include "core.h"
 #include "connection.h"
 #include "debug.h"
 #include "dnsquery.h"
 #include "proxy.h"
 #include "prpl.h"
 #include "request.h"
+#include "savedstatuses.h"
 #include "sslconn.h"
 #include "version.h"
 
@@ -61,7 +63,7 @@
 #define FB_MAX_MSG_RETRY 2
 
 #define STEAM_PLUGIN_ID "prpl-steam-mobile"
-#define STEAM_PLUGIN_VERSION "0.1"
+#define STEAM_PLUGIN_VERSION "1.3"
 
 typedef struct _SteamAccount SteamAccount;
 typedef struct _SteamBuddy SteamBuddy;
@@ -86,6 +88,9 @@ struct _SteamAccount {
 	gchar *sessionid;
 	gint idletime;
 	guint last_message_timestamp;
+	gchar *cached_access_token;
+	
+	guint watchdog_timeout;
 };
 
 struct _SteamBuddy {
