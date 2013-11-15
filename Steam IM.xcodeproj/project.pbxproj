@@ -28,6 +28,7 @@
 		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
 		CD321D95182E51F4003B36A8 /* glib-headers in Resources */ = {isa = PBXBuildFile; fileRef = CD321D94182E51F4003B36A8 /* glib-headers */; };
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
+		CD97D0C318369DE10060219A /* libnss3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321D9A182E5641003B36A8 /* libnss3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD97D0C318369DE10060219A /* libnss3.dylib in Frameworks */,
 				3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */,
 				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
 				3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */,
@@ -339,9 +341,14 @@
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libjson-glib.framework/Versions/Current/Headers",
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
+					"$(NSS_HEADER_PATH)",
+					"$(NSPR_HEADER_PATH)",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(NSS_LIB_PATH)",
+					/usr/local/Cellar/nss/3.14.1/lib,
+				);
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "Steam IM";
@@ -367,9 +374,14 @@
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libjson-glib.framework/Versions/Current/Headers",
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
+					"$(NSS_HEADER_PATH)",
+					"$(NSPR_HEADER_PATH)",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(NSS_LIB_PATH)",
+					/usr/local/Cellar/nss/3.14.1/lib,
+				);
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "Steam IM";
