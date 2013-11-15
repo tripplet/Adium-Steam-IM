@@ -27,6 +27,7 @@
 		3BF9F90515D5E31E00322064 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BF9F90315D5E31E00322064 /* InfoPlist.strings */; };
 		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
 		CD321D95182E51F4003B36A8 /* glib-headers in Resources */ = {isa = PBXBuildFile; fileRef = CD321D94182E51F4003B36A8 /* glib-headers */; };
+		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,13 +35,13 @@
 		3B1DDB0D15D8595700FA3B0E /* ESSteamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSteamService.h; sourceTree = "<group>"; };
 		3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSteamService.m; sourceTree = "<group>"; };
 		3B28C0F315D84E630029F712 /* libsteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteam.h; path = "opensteamworks/steam-mobile/libsteam.h"; sourceTree = SOURCE_ROOT; };
-		3B28C0F915D850250029F712 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "adium-1.5.2/Frameworks/libjson-glib.framework"; sourceTree = "<group>"; };
-		3B28C0FF15D851660029F712 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = "adium-1.5.2/Frameworks/libintl.framework"; sourceTree = "<group>"; };
+		3B28C0F915D850250029F712 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "libjson-glib.framework"; sourceTree = "<group>"; };
+		3B28C0FF15D851660029F712 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libintl.framework; sourceTree = "<group>"; };
 		3B28C10115D851B20029F712 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = SOURCE_ROOT; };
 		3B28C10215D851B20029F712 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = SOURCE_ROOT; };
-		3B28C10415D8528B0029F712 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = "adium-1.5.2/Frameworks/libgobject.framework"; sourceTree = "<group>"; };
+		3B28C10415D8528B0029F712 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libgobject.framework; sourceTree = "<group>"; };
 		3B2B72E4162B9023009DC257 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
-		3B2B72E6162B9145009DC257 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libglib.framework; sourceTree = "<group>"; };
+		3B2B72E6162B9145009DC257 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libglib.framework; sourceTree = SOURCE_ROOT; };
 		3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
 		3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -58,6 +59,8 @@
 		3BF9F90715D5E31E00322064 /* AISteamPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISteamPlugin.h; sourceTree = "<group>"; };
 		3BF9F90815D5E31E00322064 /* AISteamPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISteamPlugin.m; sourceTree = "<group>"; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
+		CD321D9A182E5641003B36A8 /* libnss3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnss3.dylib; path = ../../../../usr/local/Cellar/nss/3.14.1/lib/libnss3.dylib; sourceTree = SOURCE_ROOT; };
+		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD448AD8182E442000954074 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
 		CD448ADA182E459000954074 /* BuildConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +73,7 @@
 				3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */,
 				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
 				3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */,
+				CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */,
 				3B6A04F015D835AB0024F0D9 /* Adium.framework in Frameworks */,
 				3B6A04F315D8385C0024F0D9 /* AdiumLibpurple.framework in Frameworks */,
 				3B28C0FA15D850250029F712 /* libjson-glib.framework in Frameworks */,
@@ -108,6 +112,7 @@
 				3BF9F8FC15D5E31E00322064 /* Foundation.framework */,
 				3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */,
 				3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */,
+				CD321DDE182E5AA8003B36A8 /* Security.framework */,
 				3B2B72E6162B9145009DC257 /* libglib.framework */,
 				3B2B72E4162B9023009DC257 /* libpurple.framework */,
 				3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */,
@@ -116,6 +121,7 @@
 				3B28C0F915D850250029F712 /* libjson-glib.framework */,
 				3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */,
 				3B6A04EF15D835AB0024F0D9 /* Adium.framework */,
+				CD321D9A182E5641003B36A8 /* libnss3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
