@@ -12,7 +12,7 @@ How to use precompiled binary
 
 ## **Important**
 * The plugin will crash Adium if nss is not properly installed at "/usr/local/Cellar/nss/3.14.1/lib"
-* The precpmpiled build is for OSX Mavericks (10.8) on x64, it might not work under other versions
+* The precpmpiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
 
 
 ### TODO
