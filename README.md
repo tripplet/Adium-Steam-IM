@@ -8,7 +8,7 @@ http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 How to use precompiled binary
 =============================
 1. Install Mozilla nss and nspr via homebrew http://brew.sh/ (brew install nss)
-2. Download Plugin https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.5/AdiumSteamIM.zip
+2. Download Plugin (current release brocken: https://code.google.com/p/pidgin-opensteamworks/issues/detail?id=70)
 
 ## **Important**
 * The plugin will crash Adium if nss is not properly installed at "/usr/local/Cellar/nss/3.14.1/lib"
