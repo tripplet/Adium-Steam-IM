@@ -6,7 +6,3 @@
 //  Copyright (c) 2013 Hermi. All rights reserved.
 //
 ADIUM_DEVELOP_PATH = 
-
-NSS_LIB_PATH       = /usr/local/Cellar/nss/3.14.1/lib
-NSS_HEADER_PATH    = /usr/local/opt/nss/include/nss
-NSPR_HEADER_PATH   = /usr/local/opt/nspr/include/nspr
