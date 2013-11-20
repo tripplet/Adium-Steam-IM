@@ -332,7 +332,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(ADIUM_DEVELOP_PATH)/Frameworks",
-					"$(ADIUM_DEVELOP_PATH)/build/Release-Debug",
+					"$(ADIUM_DEVELOP_PATH)/build/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
@@ -360,7 +360,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(ADIUM_DEVELOP_PATH)/Frameworks",
-					"$(ADIUM_DEVELOP_PATH)/build/Release-Debug",
+					"$(ADIUM_DEVELOP_PATH)/build/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
