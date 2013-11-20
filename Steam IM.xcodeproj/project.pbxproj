@@ -247,7 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "exe=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\ninstall_name_tool -change @executable_path/../Frameworks/Adium.framework/Versions/A/Adium @executable_path/../Frameworks/Adium.framework/Versions/Current/Adium \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/AdiumLibpurple.framework/Versions/A/AdiumLibpurple @executable_path/../Frameworks/AdiumLibpurple.framework/Versions/Current/AdiumLibpurple \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libjson-glib.framework/Versions/1.0.0/libjson-glib @executable_path/../Frameworks/libjson-glib.framework/Versions/Current/libjson-glib \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libintl.framework/Versions/8/libintl @executable_path/../Frameworks/libintl.framework/Versions/Current/libintl \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libgobject.framework/Versions/2.0.0/libgobject @executable_path/../Frameworks/libgobject.framework/Versions/Current/libgobject \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libpurple.framework/Versions/0.10.5/libpurple @executable_path/../Frameworks/libpurple.framework/Versions/Current/libpurple \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libglib.framework/Versions/2.0.0/libglib @executable_path/../Frameworks/libglib.framework/Versions/Current/libglib \"$exe\"";
+			shellScript = "PLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n    /usr/bin/tail -n +2 | \\\n    /usr/bin/tr -d '\\t' | \\\n    /usr/bin/grep -e '^@[a-z_]*path.*' | \\\n    /usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n    /usr/bin/sed \\\n        s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\n    NEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\n    printf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n    /usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -351,7 +351,7 @@
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = "Steam IM";
 				WRAPPER_EXTENSION = AdiumLibpurplePlugin;
 			};
@@ -379,7 +379,7 @@
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = "Steam IM";
 				WRAPPER_EXTENSION = AdiumLibpurplePlugin;
 			};
