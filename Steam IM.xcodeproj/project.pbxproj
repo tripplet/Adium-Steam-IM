@@ -28,7 +28,6 @@
 		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
 		B1AD220E183D2371008163E2 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220D183D2371008163E2 /* libcrypto.dylib */; };
 		B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220F183D3043008163E2 /* libz.dylib */; };
-		CD321D95182E51F4003B36A8 /* glib-headers in Resources */ = {isa = PBXBuildFile; fileRef = CD321D94182E51F4003B36A8 /* glib-headers */; };
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -229,7 +228,6 @@
 				3BF9F90515D5E31E00322064 /* InfoPlist.strings in Resources */,
 				3BC5C6DD15D879BC0097D6A3 /* steam_small.png in Resources */,
 				3BC5C6DE15D879BC0097D6A3 /* steam.png in Resources */,
-				CD321D95182E51F4003B36A8 /* glib-headers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +347,6 @@
 					"$(SRCROOT)/glib-headers",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = "Steam IM";
@@ -377,7 +374,6 @@
 					"$(SRCROOT)/glib-headers",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
-				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = "Steam IM";
