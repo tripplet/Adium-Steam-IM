@@ -5,12 +5,15 @@ Updated version of the Adium Steam Plugin from
 http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 
 
-How to use precompiled binary
-=============================
-1. Download Plugin (current release broken: https://code.google.com/p/pidgin-opensteamworks/issues/detail?id=70)
-
-## **Important**
+Download
+========
+Download the working version 1.6 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.6/AdiumSteamIM_v16.zip)
 * The precompiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
+
+Thanks
+======
+Will Ross ([paxswill](https://github.com/paxswill)) for implementing the oppenssl code
+
 
 ### How to build
 1. Download Adium source-code: https://trac.adium.im/wiki/GettingNewestAdiumSource
