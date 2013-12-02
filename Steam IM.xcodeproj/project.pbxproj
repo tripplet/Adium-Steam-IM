@@ -26,9 +26,10 @@
 		3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF9F8FC15D5E31E00322064 /* Foundation.framework */; };
 		3BF9F90515D5E31E00322064 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BF9F90315D5E31E00322064 /* InfoPlist.strings */; };
 		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
+		B1AD220E183D2371008163E2 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220D183D2371008163E2 /* libcrypto.dylib */; };
+		B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220F183D3043008163E2 /* libz.dylib */; };
 		CD321D95182E51F4003B36A8 /* glib-headers in Resources */ = {isa = PBXBuildFile; fileRef = CD321D94182E51F4003B36A8 /* glib-headers */; };
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
-		CD97D0C318369DE10060219A /* libnss3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321D9A182E5641003B36A8 /* libnss3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		3BF9F90615D5E31E00322064 /* Steam IM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Steam IM-Prefix.pch"; sourceTree = "<group>"; };
 		3BF9F90715D5E31E00322064 /* AISteamPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AISteamPlugin.h; sourceTree = "<group>"; };
 		3BF9F90815D5E31E00322064 /* AISteamPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISteamPlugin.m; sourceTree = "<group>"; };
+		B1AD220D183D2371008163E2 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		B1AD220F183D3043008163E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
 		CD321D9A182E5641003B36A8 /* libnss3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnss3.dylib; path = ../../../../usr/local/Cellar/nss/3.14.1/lib/libnss3.dylib; sourceTree = SOURCE_ROOT; };
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -71,7 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD97D0C318369DE10060219A /* libnss3.dylib in Frameworks */,
+				B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */,
+				B1AD220E183D2371008163E2 /* libcrypto.dylib in Frameworks */,
 				3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */,
 				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
 				3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */,
@@ -111,6 +115,8 @@
 		3BF9F8FB15D5E31E00322064 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1AD220F183D3043008163E2 /* libz.dylib */,
+				B1AD220D183D2371008163E2 /* libcrypto.dylib */,
 				3BF9F8FC15D5E31E00322064 /* Foundation.framework */,
 				3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */,
 				3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */,
@@ -241,7 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "exe=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\ninstall_name_tool -change @executable_path/../Frameworks/Adium.framework/Versions/A/Adium @executable_path/../Frameworks/Adium.framework/Versions/Current/Adium \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/AdiumLibpurple.framework/Versions/A/AdiumLibpurple @executable_path/../Frameworks/AdiumLibpurple.framework/Versions/Current/AdiumLibpurple \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libjson-glib.framework/Versions/1.0.0/libjson-glib @executable_path/../Frameworks/libjson-glib.framework/Versions/Current/libjson-glib \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libintl.framework/Versions/8/libintl @executable_path/../Frameworks/libintl.framework/Versions/Current/libintl \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libgobject.framework/Versions/2.0.0/libgobject @executable_path/../Frameworks/libgobject.framework/Versions/Current/libgobject \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libpurple.framework/Versions/0.10.5/libpurple @executable_path/../Frameworks/libpurple.framework/Versions/Current/libpurple \"$exe\"\ninstall_name_tool -change @executable_path/../Frameworks/libglib.framework/Versions/2.0.0/libglib @executable_path/../Frameworks/libglib.framework/Versions/Current/libglib \"$exe\"";
+			shellScript = "PLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n    /usr/bin/tail -n +2 | \\\n    /usr/bin/tr -d '\\t' | \\\n    /usr/bin/grep -e '^@[a-z_]*path.*' | \\\n    /usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n    /usr/bin/sed \\\n        s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\n    NEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\n    printf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n    /usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -330,7 +336,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(ADIUM_DEVELOP_PATH)/Frameworks",
-					"$(ADIUM_DEVELOP_PATH)/build/Release-Debug",
+					"$(ADIUM_DEVELOP_PATH)/build/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
@@ -341,16 +347,11 @@
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libjson-glib.framework/Versions/Current/Headers",
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
-					"$(NSS_HEADER_PATH)",
-					"$(NSPR_HEADER_PATH)",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(NSS_LIB_PATH)",
-					/usr/local/Cellar/nss/3.14.1/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
-				OTHER_LDFLAGS = "-lz";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = "Steam IM";
 				WRAPPER_EXTENSION = AdiumLibpurplePlugin;
 			};
@@ -363,7 +364,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(ADIUM_DEVELOP_PATH)/Frameworks",
-					"$(ADIUM_DEVELOP_PATH)/build/Release-Debug",
+					"$(ADIUM_DEVELOP_PATH)/build/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
@@ -374,16 +375,11 @@
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libjson-glib.framework/Versions/Current/Headers",
 					"$(ADIUM_DEVELOP_PATH)/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
-					"$(NSS_HEADER_PATH)",
-					"$(NSPR_HEADER_PATH)",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(NSS_LIB_PATH)",
-					/usr/local/Cellar/nss/3.14.1/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
-				OTHER_LDFLAGS = "-lz";
+				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = "Steam IM";
 				WRAPPER_EXTENSION = AdiumLibpurplePlugin;
 			};

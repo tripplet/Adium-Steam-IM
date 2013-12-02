@@ -7,21 +7,13 @@ http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 
 How to use precompiled binary
 =============================
-1. Install Mozilla nss and nspr via homebrew http://brew.sh/ (brew install nss)
-2. Download Plugin (current release brocken: https://code.google.com/p/pidgin-opensteamworks/issues/detail?id=70)
+1. Download Plugin (current release broken: https://code.google.com/p/pidgin-opensteamworks/issues/detail?id=70)
 
 ## **Important**
-* The plugin will crash Adium if nss is not properly installed at "/usr/local/Cellar/nss/3.14.1/lib"
-* The precpmpiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
-
-
-### TODO
-* Rewrite steam_rsa.c to use OpenSSL instead of Mozilla NSS, to create platform independent binary build
-
+* The precompiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
 
 ### How to build
 1. Download Adium source-code: https://trac.adium.im/wiki/GettingNewestAdiumSource
 2. Compile Adium
-3. Install Mozilla nss and nspr via homebrew http://brew.sh/ (brew install nss) 
-4. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
-5. Compile the plugin
+3. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
+4. Compile the plugin

@@ -10,12 +10,121 @@ password=<base64rsaencryptedpwd>&username=<steamusername>&emailauth=&captchagid=
 */
 
 
+#if ! defined OPENSSL_CRYPTO && ! defined NSS_CRYPTO
+#ifdef __APPLE__
+#define OPENSSL_CRYPTO 0
+#warning Defaulting to OpenSSL for RSA encryption
+#else /* __APPLE__ */
+#define NSS_CRYPTO 0
+#warning Defaulting to NSS for RSA encryption
+#endif /* __APPLE__ */
+#endif /* ! defined OPENSSL_CRYPTO && ! defined NSS_CRYPTO */
+
+#ifdef NSS_CRYPTO
 #include <nss.h>
 #include <base64.h>
 #include <keyhi.h>
 #include <keythi.h>
 #include <pk11pub.h>
 #include <secdert.h>
+#endif
+
+#ifdef OPENSSL_CRYPTO
+#include <openssl/rsa.h>
+#include <openssl/bio.h>
+#include <openssl/bn.h>
+#include <openssl/err.h>
+#include <openssl/evp.h>
+#include <openssl/engine.h>
+#endif
+
+
+#ifdef OPENSSL_CRYPTO
+gchar *
+steam_encrypt_password_openssl(const gchar *modulus_str, const gchar *exponent_str, const gchar *password)
+{
+	BIGNUM *bn_modulus;
+	BIGNUM *bn_exponent;
+	RSA *rsa;
+	gchar *output = NULL;
+	guchar *encrypted;
+	int rv;
+
+	ERR_load_crypto_strings();
+
+	bn_modulus = BN_new();
+	rv = BN_hex2bn(&bn_modulus, modulus_str);
+	if (rv == 0)
+	{
+		purple_debug_error("steam", "modulus hext to bignum parse failed\n");
+		BN_free(bn_modulus);
+		return NULL;
+	}
+
+	bn_exponent = BN_new();
+	rv = BN_hex2bn(&bn_exponent, exponent_str);
+	if (rv == 0)
+	{
+		purple_debug_error("steam", "exponent hex to bignum parse failed\n");
+		BN_clear_free(bn_modulus);
+		BN_clear_free(bn_exponent);
+		return NULL;
+	}
+
+	rsa = RSA_new();
+	if (rsa == NULL)
+	{
+		purple_debug_error("steam", "RSA structure allocation failed\n");
+		BN_free(bn_modulus);
+		BN_free(bn_exponent);
+		return NULL;
+	}
+	BN_free(rsa->n);
+	rsa->n = bn_modulus;
+	BN_free(rsa->e);
+	rsa->e = bn_exponent;
+
+	encrypted = g_new0(guchar, RSA_size(rsa));
+	rv = RSA_public_encrypt((int)(strlen(password) - 1),
+							(const unsigned char *)password,
+							encrypted,
+							rsa,
+							RSA_PKCS1_PADDING);
+	if (rv < 0)
+	{
+		unsigned long error_num = ERR_get_error();
+		char *error_str = ERR_error_string(error_num, NULL);
+		purple_debug_error("steam", error_str);
+		RSA_free(rsa);
+		g_free(encrypted);
+		return NULL;
+	}
+
+	/*
+	 BIO *b64_filter = BIO_new(BIO_f_base64());
+	 BIO *mem_bio = BIO_new(BIO_s_mem());
+	 mem_bio = BIO_push(b64_filter, mem_bio);
+	 BIO_write(mem_bio, encrypted, RSA_size(rsa));
+	 BIO_flush(mem_bio);
+	 char *bio_mem;
+	 long bio_size = BIO_get_mem_data(mem_bio, &bio_mem);
+	 printf("bio_size: %ld\n", bio_size);
+	 printf("RSA_size: %d\n", RSA_size(rsa));
+	 output = g_strndup(bio_mem, bio_size);
+	 BIO_free_all(mem_bio);
+	 */
+	output = purple_base64_encode(encrypted, RSA_size(rsa));
+
+	// Cleanup
+	RSA_free(rsa);
+	ERR_free_strings();
+	g_free(encrypted);
+
+	return output;
+}
+#endif
+
+#ifdef NSS_CRYPTO
 
 // Coverts a hex string, eg "ABCD0123" into "\xAB\xCD\x01\x23"
 // The length of the returned char* will always be half of that of the input string
@@ -59,7 +168,7 @@ pkcs1pad2(const char *data, int keysize)
 
 
 gchar *
-steam_encrypt_password(const gchar *modulus_str, const gchar *exponent_str, const gchar *password)
+steam_encrypt_password_nss(const gchar *modulus_str, const gchar *exponent_str, const gchar *password)
 {
 	SECItem derPubKey;
 	SECKEYPublicKey *pubKey;
@@ -127,4 +236,18 @@ steam_encrypt_password(const gchar *modulus_str, const gchar *exponent_str, cons
 	if (pubKey) SECKEY_DestroyPublicKey(pubKey);
 	
 	return output;
+}
+#endif
+
+gchar *
+steam_encrypt_password(const gchar *modulus_str, const gchar *exponent_str, const gchar *password)
+{
+#ifdef NSS_CRYPTO
+	return steam_encrypt_password_nss(modulus_str, exponent_str, password);
+#elif OPENSSL_CRYPTO
+	return steam_encrypt_password_openssl(modulus_str, exponent_str, password);
+#else
+	return "";
+#endif
+
 }
