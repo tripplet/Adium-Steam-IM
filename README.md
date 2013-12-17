@@ -12,7 +12,8 @@ Download the working version 1.6.2 [here](https://github.com/tripplet/Adium-Stea
 
 Thanks
 ======
-Will Ross ([paxswill](https://github.com/paxswill)) for implementing the oppenssl code
+* Will Ross ([paxswill](https://github.com/paxswill)) for implementing the oppenssl code
+* [Pidgin-Opensteamworks](https://code.google.com/p/pidgin-opensteamworks/)
 
 
 ### How to build
