@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>AdIM</string>
 	<key>CFBundleVersion</key>
-	<string>1.6</string>
+	<string>1.6.2</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2012 Hermi. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
