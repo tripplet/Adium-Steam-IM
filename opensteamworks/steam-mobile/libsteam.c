@@ -141,6 +141,16 @@ steam_personastate_to_statustype(gint64 state)
 	return status_id;
 }
 
+static const gchar *
+steam_accountid_to_steamid(gint64 accountid)
+{
+	static gchar steamid[20];
+	
+	sprintf(steamid, "%" G_GINT64_FORMAT, accountid + G_GINT64_CONSTANT(76561197960265728));
+	
+	return steamid;
+}
+
 static void steam_fetch_new_sessionid(SteamAccount *sa);
 static void steam_get_friend_summaries(SteamAccount *sa, const gchar *who);
 
@@ -638,11 +648,13 @@ steam_got_friend_summaries(SteamAccount *sa, JsonObject *obj, gpointer user_data
 		g_free(sbuddy->realname); sbuddy->realname = g_strdup(json_object_get_string_member(player, "realname"));
 		g_free(sbuddy->profileurl); sbuddy->profileurl = g_strdup(json_object_get_string_member(player, "profileurl"));
 		g_free(sbuddy->avatar); sbuddy->avatar = g_strdup(json_object_get_string_member(player, "avatarfull"));
+		sbuddy->personastateflags = (guint) json_object_get_int_member(player, "personastateflags");
+		
 		// Optional :
-		g_free(sbuddy->gameid); sbuddy->gameid = g_strdup(json_object_get_string_member(player, "gameid"));
-		g_free(sbuddy->gameextrainfo); sbuddy->gameextrainfo = g_strdup(json_object_get_string_member(player, "gameextrainfo"));
-		g_free(sbuddy->gameserversteamid); sbuddy->gameserversteamid = g_strdup(json_object_get_string_member(player, "gameserversteamid"));
-		g_free(sbuddy->lobbysteamid); sbuddy->lobbysteamid = g_strdup(json_object_get_string_member(player, "lobbysteamid"));
+		g_free(sbuddy->gameid); sbuddy->gameid = json_object_has_member(player, "gameid") ? g_strdup(json_object_get_string_member(player, "gameid")) : NULL;
+		g_free(sbuddy->gameextrainfo); sbuddy->gameextrainfo = json_object_has_member(player, "gameextrainfo") ? g_strdup(json_object_get_string_member(player, "gameextrainfo")) : NULL;
+		g_free(sbuddy->gameserversteamid); sbuddy->gameserversteamid = json_object_has_member(player, "gameserversteamid") ? g_strdup(json_object_get_string_member(player, "gameserversteamid")) : NULL;
+		g_free(sbuddy->lobbysteamid); sbuddy->lobbysteamid = json_object_has_member(player, "lobbysteamid") ? g_strdup(json_object_get_string_member(player, "lobbysteamid")) : NULL;
 		
 		sbuddy->lastlogoff = (guint) json_object_get_int_member(player, "lastlogoff");
 		
@@ -681,6 +693,23 @@ steam_get_friend_summaries(SteamAccount *sa, const gchar *who)
 	steam_post_or_get(sa, STEAM_METHOD_GET | STEAM_METHOD_SSL, NULL, url->str, NULL, steam_got_friend_summaries, NULL, TRUE);
 	
 	g_string_free(url, TRUE);
+}
+
+static void
+steam_get_nickname_list_cb(SteamAccount *sa, JsonObject *obj, gpointer user_data)
+{
+	JsonObject *response = json_object_get_object_member(obj, "response");
+	JsonArray *nicknames = json_object_get_array_member(response, "nicknames");
+	guint index;
+	
+	for(index = 0; index < json_array_get_length(nicknames); index++)
+	{
+		JsonObject *friend = json_array_get_object_element(nicknames, index);
+		gint64 accountid = json_object_get_int_member(friend, "accountid");
+		const gchar *nickname = json_object_get_string_member(friend, "nickname");
+				
+		purple_serv_got_private_alias(sa->pc, steam_accountid_to_steamid(accountid), nickname);
+	}
 }
 
 static void
@@ -742,7 +771,12 @@ steam_get_friend_list(SteamAccount *sa)
 	steam_post_or_get(sa, STEAM_METHOD_GET | STEAM_METHOD_SSL, NULL, url->str, NULL, steam_get_friend_list_cb, NULL, TRUE);
 	
 	g_string_free(url, TRUE);
-
+	
+	// Grab user nicknames
+	url = g_string_new("/IPlayerService/GetNicknameList/v0001?");
+	g_string_append_printf(url, "access_token=%s&", purple_url_encode(steam_account_get_access_token(sa)));
+	steam_post_or_get(sa, STEAM_METHOD_GET | STEAM_METHOD_SSL, NULL, url->str, NULL, steam_get_nickname_list_cb, NULL, TRUE);
+	g_string_free(url, TRUE);
 }
 
 /******************************************************************************/
@@ -759,7 +793,14 @@ static gchar *steam_status_text(PurpleBuddy *buddy)
 	SteamBuddy *sbuddy = buddy->proto_data;
 
 	if (sbuddy && sbuddy->gameextrainfo)
-		return g_markup_printf_escaped("In game %s", sbuddy->gameextrainfo);
+	{
+		if (sbuddy->gameid)
+		{
+			return g_markup_printf_escaped("In game %s", sbuddy->gameextrainfo);
+		} else {
+			return g_markup_printf_escaped("In non-Steam game %s", sbuddy->gameextrainfo);
+		}
+	}
 
 	return NULL;
 }
@@ -774,7 +815,14 @@ steam_tooltip_text(PurpleBuddy *buddy, PurpleNotifyUserInfo *user_info, gboolean
 		purple_notify_user_info_add_pair_html(user_info, "Name", sbuddy->personaname);
 		purple_notify_user_info_add_pair_html(user_info, "Real Name", sbuddy->realname);
 		if (sbuddy->gameextrainfo)
-			purple_notify_user_info_add_pair_html(user_info, "In game", sbuddy->gameextrainfo);
+		{
+			if (sbuddy->gameid)
+			{
+				purple_notify_user_info_add_pair_html(user_info, "In game", sbuddy->gameextrainfo);
+			} else {
+				purple_notify_user_info_add_pair_html(user_info, "In non-Steam game", sbuddy->gameextrainfo);
+			}
+		}
 	}
 }
 
@@ -783,11 +831,24 @@ steam_list_emblem(PurpleBuddy *buddy)
 {
 	SteamBuddy *sbuddy = buddy->proto_data;
 	
-	if (sbuddy && sbuddy->gameid)
+	if (sbuddy)
 	{
-		return "game";
+		if (sbuddy->gameextrainfo)
+		{
+			return "game";
+		}
+		if (sbuddy->personastateflags == 512)
+		{
+			//Steam mobile, also Pidgin
+			return "mobile";
+		}
+		if (sbuddy->personastateflags == 1024)
+		{
+			//Big Picture mode
+			return "hiptop";
+		}
 	}
-	
+		
 	return NULL;
 }
 
@@ -868,6 +929,7 @@ steam_login_with_access_token(SteamAccount *sa)
 	gchar *postdata;
 	
 	postdata = g_strdup_printf("access_token=%s", purple_url_encode(steam_account_get_access_token(sa)));
+	//TODO, handle a 401 response from the server - trash the steamguard and access_token
 	steam_post_or_get(sa, STEAM_METHOD_POST | STEAM_METHOD_SSL, NULL, "/ISteamWebUserPresenceOAuth/Logon/v0001", postdata, steam_login_access_token_cb, NULL, TRUE);
 	g_free(postdata);
 }
@@ -1248,8 +1310,8 @@ static gboolean plugin_load(PurplePlugin *plugin)
 	purple_debug_info("steam", "Purple core UI name: %s\n", purple_core_get_ui());
 		
 #ifdef G_OS_UNIX
-  core_is_haze = g_str_equal(purple_core_get_ui(), "haze");
-  
+	core_is_haze = g_str_equal(purple_core_get_ui(), "haze");
+	
 	if (core_is_haze && gnome_keyring_lib == NULL) {
 		purple_debug_info("steam", "UI Core is Telepathy-Haze, attempting to load Gnome-Keyring\n");
 		
