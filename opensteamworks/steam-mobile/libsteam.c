@@ -153,6 +153,7 @@ steam_accountid_to_steamid(gint64 accountid)
 
 static void steam_fetch_new_sessionid(SteamAccount *sa);
 static void steam_get_friend_summaries(SteamAccount *sa, const gchar *who);
+static void steam_get_rsa_key(SteamAccount *sa);
 
 static void
 steam_friend_action(SteamAccount *sa, const gchar *who, const gchar *action)
@@ -899,7 +900,8 @@ steam_login_access_token_cb(SteamAccount *sa, JsonObject *obj, gpointer user_dat
 {
 	if (!g_str_equal(json_object_get_string_member(obj, "error"), "OK"))
 	{
-		purple_connection_error(sa->pc, PURPLE_CONNECTION_ERROR_AUTHENTICATION_FAILED, _("Bad username/password or Steam Guard Code required"));
+		purple_debug_error("steam", "access_token login error: %s\n", json_object_get_string_member(obj, "error"));
+		purple_connection_error(sa->pc, PURPLE_CONNECTION_ERROR_NETWORK_ERROR, json_object_get_string_member(obj, "error"));
 		return;
 	}
 
@@ -924,14 +926,36 @@ steam_login_access_token_cb(SteamAccount *sa, JsonObject *obj, gpointer user_dat
 }
 
 static void
+steam_login_with_access_token_error_cb(SteamAccount *sa, const gchar *data, gssize data_len, gpointer user_data)
+{
+	if (g_strstr_len(data, data_len, "401 Unauthorized")) {
+		// Our access_token looks like it expired?
+		//Wipe it and try re-auth
+		
+		steam_account_set_access_token(sa, NULL);
+		steam_get_rsa_key(sa);
+	} else {
+		xmlnode *error_response = xmlnode_from_str(data, data_len);
+		xmlnode *title = xmlnode_get_child(error_response, "title");
+		gchar *title_str = xmlnode_get_data_unescaped(title);
+		purple_connection_error(sa->pc, PURPLE_CONNECTION_ERROR_NETWORK_ERROR, title_str);
+		g_free(title_str);
+		xmlnode_free(error_response);
+	}
+}
+
+static void
 steam_login_with_access_token(SteamAccount *sa)
 {
 	gchar *postdata;
+	SteamConnection *sconn;
 	
 	postdata = g_strdup_printf("access_token=%s", purple_url_encode(steam_account_get_access_token(sa)));
 	//TODO, handle a 401 response from the server - trash the steamguard and access_token
-	steam_post_or_get(sa, STEAM_METHOD_POST | STEAM_METHOD_SSL, NULL, "/ISteamWebUserPresenceOAuth/Logon/v0001", postdata, steam_login_access_token_cb, NULL, TRUE);
+	sconn = steam_post_or_get(sa, STEAM_METHOD_POST | STEAM_METHOD_SSL, NULL, "/ISteamWebUserPresenceOAuth/Logon/v0001", postdata, steam_login_access_token_cb, NULL, TRUE);
 	g_free(postdata);
+	
+	sconn->error_callback = steam_login_with_access_token_error_cb;
 }
 
 static void 
@@ -940,7 +964,12 @@ steam_set_steam_guard_token_cb(gpointer data, const gchar *steam_guard_token)
 	PurpleAccount *account = data;
 	
 	purple_account_set_string(account, "steam_guard_code", steam_guard_token);
-	purple_account_connect(account);
+	
+	if (!purple_account_get_enabled(account, purple_core_get_ui())) {
+		purple_account_set_enabled(account, purple_core_get_ui(), TRUE);
+	} else {
+		purple_account_connect(account);
+	}
 }
 
 static void
@@ -986,7 +1015,12 @@ steam_login_cb(SteamAccount *sa, JsonObject *obj, gpointer user_data)
 			purple_connection_error(sa->pc, PURPLE_CONNECTION_ERROR_AUTHENTICATION_FAILED, error_description);
 		} else
 		{
-			purple_connection_error(sa->pc, PURPLE_CONNECTION_ERROR_AUTHENTICATION_FAILED, error_description);
+			if (g_str_equal(error_description, "SteamGuard"))
+			{
+				steam_set_steam_guard_token_cb(sa->account, NULL);
+			} else {
+				purple_connection_error(sa->pc, PURPLE_CONNECTION_ERROR_AUTHENTICATION_FAILED, error_description);
+			}
 		}
 	}
 }
@@ -1013,7 +1047,7 @@ steam_login_got_rsakey(SteamAccount *sa, JsonObject *obj, gpointer user_data)
 							json_object_get_string_member(obj, "publickey_exp"),
 							account->password);
 	
-	purple_debug_misc("steam", "Encrypted password is %s\n", encrypted_password);
+	//purple_debug_misc("steam", "Encrypted password is %s\n", encrypted_password);
 	
 	if (!encrypted_password)
 	{
@@ -1032,12 +1066,22 @@ steam_login_got_rsakey(SteamAccount *sa, JsonObject *obj, gpointer user_data)
 	g_string_append(post, "captchagid=-1&");
 	g_string_append_printf(post, "rsatimestamp=%s", purple_url_encode(json_object_get_string_member(obj, "timestamp")));
 	
-	purple_debug_misc("steam", "Postdata: %s\n", post->str);
+	//purple_debug_misc("steam", "Postdata: %s\n", post->str);
 	
 	steam_post_or_get(sa, STEAM_METHOD_POST | STEAM_METHOD_SSL, "steamcommunity.com", "/mobilelogin/dologin", post->str, steam_login_cb, NULL, TRUE);
 	g_string_free(post, TRUE);
 	
 	g_free(encrypted_password);
+}
+
+static void
+steam_get_rsa_key(SteamAccount *sa)
+{
+	gchar *url;
+
+	url = g_strdup_printf("/mobilelogin/getrsakey?username=%s", purple_url_encode(sa->account->username));
+	steam_post_or_get(sa, STEAM_METHOD_GET | STEAM_METHOD_SSL, "steamcommunity.com", url, NULL, steam_login_got_rsakey, NULL, TRUE);
+	g_free(url);
 }
 
 #ifdef G_OS_UNIX
@@ -1052,9 +1096,7 @@ steam_keyring_got_password(GnomeKeyringResult res, const gchar* access_token, gp
 		steam_login_with_access_token(sa);
 	} else
 	{
-		gchar *url = g_strdup_printf("/mobilelogin/getrsakey?username=%s", purple_url_encode(sa->account->username));
-		steam_post_or_get(sa, STEAM_METHOD_GET | STEAM_METHOD_SSL, "steamcommunity.com", url, NULL, steam_login_got_rsakey, NULL, TRUE);
-		g_free(url);
+		steam_get_rsa_key(sa);
 	}
 }
 #endif
@@ -1097,9 +1139,7 @@ steam_login(PurpleAccount *account)
 		steam_login_with_access_token(sa);
 	} else
 	{
-		gchar *url = g_strdup_printf("/mobilelogin/getrsakey?username=%s", purple_url_encode(account->username));
-		steam_post_or_get(sa, STEAM_METHOD_GET | STEAM_METHOD_SSL, "steamcommunity.com", url, NULL, steam_login_got_rsakey, NULL, TRUE);
-		g_free(url);
+		steam_get_rsa_key(sa);
 	}
 	
 	purple_connection_set_state(pc, PURPLE_CONNECTING);
