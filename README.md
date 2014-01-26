@@ -7,7 +7,7 @@ http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 
 Download
 ========
-Download the working version 1.6.2 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.6.2/AdiumSteamIM_v162.zip)
+Download the working version 1.7 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.7/AdiumSteamIM_v17.zip)
 * The precompiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
 
 Thanks
