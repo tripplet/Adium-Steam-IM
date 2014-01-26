@@ -35,12 +35,12 @@ extern void purple_init_steam_plugin();
 
 - (NSString *)pluginAuthor
 {
-	return @"Hermi <Hermi.Hg@gmail.com>, Eion Robb <eion@robbmob.com>";
+	return @"Tobias Tangemann, Hermi <Hermi.Hg@gmail.com>, Eion Robb <eion@robbmob.com>";
 }
 
 -(NSString *)pluginVersion
 {
-	return @"1.3";
+	return @"1.7";
 }
 
 -(NSString *)pluginDescription
