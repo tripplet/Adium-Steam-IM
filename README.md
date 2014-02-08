@@ -23,3 +23,7 @@ Thanks
 4. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
 5. Compile the plugin
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tripplet/adium-steam-im/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
