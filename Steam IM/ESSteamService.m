@@ -40,6 +40,7 @@
 - (NSCharacterSet *)allowedCharacters {
   NSMutableCharacterSet *allowed = [NSMutableCharacterSet alphanumericCharacterSet];
   [allowed formUnionWithCharacterSet:[NSCharacterSet  punctuationCharacterSet]];
+  [allowed formUnionWithCharacterSet:[NSCharacterSet  whitespaceCharacterSet]];
   return allowed;
 }
 
