@@ -7,7 +7,7 @@ http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 
 Download
 ========
-Download the working version 1.7 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.7/AdiumSteamIM_v17.zip)
+Download the working version 1.7.1 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.7.1/AdiumSteamIM_v171.zip)
 * The precompiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
 
 Thanks
@@ -22,5 +22,3 @@ Thanks
 3. Compile polarssl -- "cd polarssl; mkdir build; cd build; cmake ..; make"
 4. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
 5. Compile the plugin
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tripplet/adium-steam-im/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
