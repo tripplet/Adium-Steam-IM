@@ -1,9 +1,6 @@
 Adium-Steam-IM
 ==============
 Adium protocol plugin to support Steam instant messaging
-Updated version of the Adium Steam Plugin from 
-http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
-
 
 Download
 ========
@@ -14,6 +11,7 @@ Thanks
 ======
 * Will Ross ([paxswill](https://github.com/paxswill)) for implementing the oppenssl code
 * [Pidgin-Opensteamworks](https://code.google.com/p/pidgin-opensteamworks/)
+* Old code from http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 
 
 ### How to build
