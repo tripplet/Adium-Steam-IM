@@ -11,14 +11,12 @@
 		3B1DDB1015D8595700FA3B0E /* ESSteamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */; };
 		3B28C0FA15D850250029F712 /* libjson-glib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C0F915D850250029F712 /* libjson-glib.framework */; };
 		3B28C10015D851660029F712 /* libintl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C0FF15D851660029F712 /* libintl.framework */; };
-		3B28C10315D851B20029F712 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C10115D851B20029F712 /* steam_connection.c */; };
 		3B28C10515D8528B0029F712 /* libgobject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C10415D8528B0029F712 /* libgobject.framework */; };
 		3B2B72E5162B9023009DC257 /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2B72E4162B9023009DC257 /* libpurple.framework */; };
 		3B2B72E7162B9145009DC257 /* libglib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2B72E6162B9145009DC257 /* libglib.framework */; };
 		3B4B0C7715D9D4E2002A4B1D /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */; };
 		3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */; };
 		3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */; };
-		3B56D1AB15DCBF0600E6329F /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B56D1AA15DCBF0600E6329F /* libsteam.c */; };
 		3B6A04F015D835AB0024F0D9 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A04EF15D835AB0024F0D9 /* Adium.framework */; };
 		3B6A04F315D8385C0024F0D9 /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */; };
 		3BC5C6DD15D879BC0097D6A3 /* steam_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5C6DB15D879BC0097D6A3 /* steam_small.png */; };
@@ -29,17 +27,16 @@
 		B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220F183D3043008163E2 /* libz.dylib */; };
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
 		CD7E816F186096BC0000F41D /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7E816E186096BC0000F41D /* libpolarssl.a */; };
+		CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5C18CCB997007B4808 /* libsteam.c */; };
+		CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5E18CCB997007B4808 /* steam_connection.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B1DDB0C15D8595700FA3B0E /* ESPurpleSteamAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPurpleSteamAccount.m; sourceTree = "<group>"; };
 		3B1DDB0D15D8595700FA3B0E /* ESSteamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSteamService.h; sourceTree = "<group>"; };
 		3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSteamService.m; sourceTree = "<group>"; };
-		3B28C0F315D84E630029F712 /* libsteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteam.h; path = "opensteamworks/steam-mobile/libsteam.h"; sourceTree = SOURCE_ROOT; };
 		3B28C0F915D850250029F712 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "libjson-glib.framework"; sourceTree = "<group>"; };
 		3B28C0FF15D851660029F712 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libintl.framework; sourceTree = "<group>"; };
-		3B28C10115D851B20029F712 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = SOURCE_ROOT; };
-		3B28C10215D851B20029F712 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = SOURCE_ROOT; };
 		3B28C10415D8528B0029F712 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libgobject.framework; sourceTree = "<group>"; };
 		3B2B72E4162B9023009DC257 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
 		3B2B72E6162B9145009DC257 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libglib.framework; sourceTree = SOURCE_ROOT; };
@@ -47,7 +44,6 @@
 		3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B4BC5C215D8DA7400FB6876 /* Steam IM.AdiumLibpurplePlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Steam IM.AdiumLibpurplePlugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B56D1AA15DCBF0600E6329F /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/steam-mobile/libsteam.c"; sourceTree = SOURCE_ROOT; };
 		3B6A04EF15D835AB0024F0D9 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
 		3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdiumLibpurple.framework; sourceTree = "<group>"; };
 		3B80170315D8CDDB00DA623D /* ESPurpleSteamAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPurpleSteamAccount.h; sourceTree = "<group>"; };
@@ -62,9 +58,15 @@
 		B1AD220F183D3043008163E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		CD448AD8182E442000954074 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
 		CD448ADA182E459000954074 /* BuildConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
 		CD7E816E186096BC0000F41D /* libpolarssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpolarssl.a; path = polarssl/build/library/libpolarssl.a; sourceTree = "<group>"; };
+		CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsteamworks.cpp; path = opensteamworks/trunk/libsteamworks.cpp; sourceTree = "<group>"; };
+		CD8B2F5918CCB972007B4808 /* libsteamworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteamworks.h; path = opensteamworks/trunk/libsteamworks.h; sourceTree = "<group>"; };
+		CD8B2F5C18CCB997007B4808 /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/trunk/steam-mobile/libsteam.c"; sourceTree = "<group>"; };
+		CD8B2F5D18CCB997007B4808 /* libsteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteam.h; path = "opensteamworks/trunk/steam-mobile/libsteam.h"; sourceTree = "<group>"; };
+		CD8B2F5E18CCB997007B4808 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/trunk/steam-mobile/steam_connection.c"; sourceTree = "<group>"; };
+		CD8B2F5F18CCB997007B4808 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/trunk/steam-mobile/steam_connection.h"; sourceTree = "<group>"; };
+		CD8B2F6018CCB997007B4808 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/trunk/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,14 +152,24 @@
 		CD448AD7182E43C600954074 /* pidgin-opensteamworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */,
+				CD8B2F5918CCB972007B4808 /* libsteamworks.h */,
+				CD8B2F5B18CCB986007B4808 /* steam-mobile */,
 				CD321D94182E51F4003B36A8 /* glib-headers */,
-				3B28C0F315D84E630029F712 /* libsteam.h */,
-				3B56D1AA15DCBF0600E6329F /* libsteam.c */,
-				3B28C10115D851B20029F712 /* steam_connection.c */,
-				3B28C10215D851B20029F712 /* steam_connection.h */,
-				CD448AD8182E442000954074 /* steam_rsa.c */,
 			);
 			name = "pidgin-opensteamworks";
+			sourceTree = "<group>";
+		};
+		CD8B2F5B18CCB986007B4808 /* steam-mobile */ = {
+			isa = PBXGroup;
+			children = (
+				CD8B2F5C18CCB997007B4808 /* libsteam.c */,
+				CD8B2F5D18CCB997007B4808 /* libsteam.h */,
+				CD8B2F5E18CCB997007B4808 /* steam_connection.c */,
+				CD8B2F5F18CCB997007B4808 /* steam_connection.h */,
+				CD8B2F6018CCB997007B4808 /* steam_rsa.c */,
+			);
+			name = "steam-mobile";
 			sourceTree = "<group>";
 		};
 		CD9E90A518611945006C937B /* System */ = {
@@ -269,10 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */,
-				3B28C10315D851B20029F712 /* steam_connection.c in Sources */,
+				CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */,
+				CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */,
 				3B1DDB0F15D8595700FA3B0E /* ESPurpleSteamAccount.m in Sources */,
 				3B1DDB1015D8595700FA3B0E /* ESSteamService.m in Sources */,
-				3B56D1AB15DCBF0600E6329F /* libsteam.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +306,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD448ADA182E459000954074 /* BuildConfig.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -303,10 +314,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = USE_POLARSSL_CRYPTO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -321,7 +329,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD448ADA182E459000954074 /* BuildConfig.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -329,6 +336,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = USE_POLARSSL_CRYPTO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
