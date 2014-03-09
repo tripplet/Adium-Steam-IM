@@ -17,6 +17,6 @@ Thanks
 ### How to build
 1. Download Adium source-code: https://trac.adium.im/wiki/GettingNewestAdiumSource
 2. Compile Adium
-3. Compile polarssl -- "cd polarssl; mkdir build; cd build; cmake ..; make"
+3. Compile polarssl -- "cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make"
 4. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
 5. Compile the plugin

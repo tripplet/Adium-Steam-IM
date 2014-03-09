@@ -61,7 +61,6 @@
 		3BF9F90815D5E31E00322064 /* AISteamPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AISteamPlugin.m; sourceTree = "<group>"; };
 		B1AD220F183D3043008163E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
-		CD321D9A182E5641003B36A8 /* libnss3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnss3.dylib; path = ../../../../usr/local/Cellar/nss/3.14.1/lib/libnss3.dylib; sourceTree = SOURCE_ROOT; };
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD448AD8182E442000954074 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
 		CD448ADA182E459000954074 /* BuildConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
@@ -114,21 +113,9 @@
 		3BF9F8FB15D5E31E00322064 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD9E90A518611945006C937B /* System */,
+				CD9E90A618611956006C937B /* Adium */,
 				CD7E816E186096BC0000F41D /* libpolarssl.a */,
-				B1AD220F183D3043008163E2 /* libz.dylib */,
-				3BF9F8FC15D5E31E00322064 /* Foundation.framework */,
-				3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */,
-				3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */,
-				CD321DDE182E5AA8003B36A8 /* Security.framework */,
-				3B2B72E6162B9145009DC257 /* libglib.framework */,
-				3B2B72E4162B9023009DC257 /* libpurple.framework */,
-				3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */,
-				3B28C10415D8528B0029F712 /* libgobject.framework */,
-				3B28C0FF15D851660029F712 /* libintl.framework */,
-				3B28C0F915D850250029F712 /* libjson-glib.framework */,
-				3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */,
-				3B6A04EF15D835AB0024F0D9 /* Adium.framework */,
-				CD321D9A182E5641003B36A8 /* libnss3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +158,33 @@
 				CD448AD8182E442000954074 /* steam_rsa.c */,
 			);
 			name = "pidgin-opensteamworks";
+			sourceTree = "<group>";
+		};
+		CD9E90A518611945006C937B /* System */ = {
+			isa = PBXGroup;
+			children = (
+				B1AD220F183D3043008163E2 /* libz.dylib */,
+				3BF9F8FC15D5E31E00322064 /* Foundation.framework */,
+				3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */,
+				3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */,
+				CD321DDE182E5AA8003B36A8 /* Security.framework */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		CD9E90A618611956006C937B /* Adium */ = {
+			isa = PBXGroup;
+			children = (
+				3B2B72E6162B9145009DC257 /* libglib.framework */,
+				3B2B72E4162B9023009DC257 /* libpurple.framework */,
+				3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */,
+				3B28C10415D8528B0029F712 /* libgobject.framework */,
+				3B28C0FF15D851660029F712 /* libintl.framework */,
+				3B28C0F915D850250029F712 /* libjson-glib.framework */,
+				3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */,
+				3B6A04EF15D835AB0024F0D9 /* Adium.framework */,
+			);
+			name = Adium;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +299,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -299,9 +312,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -315,15 +327,14 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
