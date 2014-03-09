@@ -1,0 +1,3 @@
+[submodule "polarssl"]
+	path = polarssl
+	url = https://github.com/polarssl/polarssl
