@@ -1,3 +1,6 @@
 [submodule "polarssl"]
 	path = polarssl
-	url = https://github.com/polarssl/polarssl
+	url = https://github.com/polarssl/polarssl.git
+[submodule "opensteamworks"]
+	path = opensteamworks
+	url = https://github.com/tripplet/pidgin-opensteamworks.git
