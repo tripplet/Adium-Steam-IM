@@ -60,13 +60,13 @@
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD448ADA182E459000954074 /* BuildConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
 		CD7E816E186096BC0000F41D /* libpolarssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpolarssl.a; path = polarssl/build/library/libpolarssl.a; sourceTree = "<group>"; };
-		CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsteamworks.cpp; path = opensteamworks/trunk/libsteamworks.cpp; sourceTree = "<group>"; };
-		CD8B2F5918CCB972007B4808 /* libsteamworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteamworks.h; path = opensteamworks/trunk/libsteamworks.h; sourceTree = "<group>"; };
-		CD8B2F5C18CCB997007B4808 /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/trunk/steam-mobile/libsteam.c"; sourceTree = "<group>"; };
-		CD8B2F5D18CCB997007B4808 /* libsteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteam.h; path = "opensteamworks/trunk/steam-mobile/libsteam.h"; sourceTree = "<group>"; };
-		CD8B2F5E18CCB997007B4808 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/trunk/steam-mobile/steam_connection.c"; sourceTree = "<group>"; };
-		CD8B2F5F18CCB997007B4808 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/trunk/steam-mobile/steam_connection.h"; sourceTree = "<group>"; };
-		CD8B2F6018CCB997007B4808 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/trunk/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
+		CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsteamworks.cpp; path = opensteamworks/libsteamworks.cpp; sourceTree = "<group>"; };
+		CD8B2F5918CCB972007B4808 /* libsteamworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteamworks.h; path = opensteamworks/libsteamworks.h; sourceTree = "<group>"; };
+		CD8B2F5C18CCB997007B4808 /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/steam-mobile/libsteam.c"; sourceTree = "<group>"; };
+		CD8B2F5D18CCB997007B4808 /* libsteam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteam.h; path = "opensteamworks/steam-mobile/libsteam.h"; sourceTree = "<group>"; };
+		CD8B2F5E18CCB997007B4808 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = "<group>"; };
+		CD8B2F5F18CCB997007B4808 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = "<group>"; };
+		CD8B2F6018CCB997007B4808 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
