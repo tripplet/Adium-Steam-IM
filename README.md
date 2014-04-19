@@ -4,8 +4,8 @@ Adium protocol plugin to support Steam instant messaging
 
 Download
 ========
-Download the working version 1.7.1 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.7.1/AdiumSteamIM_v171.zip)
-* The precompiled build is for OSX Mavericks (10.9) on x64, it might not work under other versions
+Download the working version 1.7.3 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.7.3/AdiumSteamIM_v173.zip)
+* The precompiled build is for OSX Mavericks (10.9 x86 and x64), it might not work under other versions
 
 Thanks
 ======
