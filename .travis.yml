@@ -1,0 +1,6 @@
+language: objective-c
+before_install:
+  - hg clone ssh://hg@bitbucket.org/adium/adium
+branches:
+  only:
+    - master
