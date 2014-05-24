@@ -3,7 +3,8 @@ before_install:
   - wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz
   - mkdir adium
   - tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1
+  - cd adium
   - xcodebuild -project Adium.xcodeproj
 branches:
   only:
-    - master
+    - travis-ci
