@@ -4,7 +4,9 @@ before_install:
   - mkdir adium
   - tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1
   - cd adium
-  - xcodebuild -project Adium.xcodeproj
+  - xctool -scheme Adium build
+  - cd ..
+  - cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make
 branches:
   only:
     - travis-ci
