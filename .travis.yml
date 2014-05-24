@@ -1,6 +1,9 @@
 language: objective-c
 before_install:
-  - hg clone ssh://hg@bitbucket.org/adium/adium
+  - wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz
+  - mkdir adium
+  - tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1
+  - xcodebuild -project Adium.xcodeproj
 branches:
   only:
     - master
