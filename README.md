@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tripplet/Adium-Steam-IM.svg?branch=travis-ci)](https://travis-ci.org/tripplet/Adium-Steam-IM)
+
 Adium-Steam-IM
 ==============
 Adium protocol plugin to support Steam instant messaging
