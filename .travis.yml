@@ -1,6 +1,5 @@
 language: objective-c
 before_install:
-  - brew update; brew install cmake
   - cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make; cd ../..
   - wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz
   - mkdir adium; tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1;
