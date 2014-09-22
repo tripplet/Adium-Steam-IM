@@ -29,6 +29,8 @@
 		CD7E816F186096BC0000F41D /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7E816E186096BC0000F41D /* libpolarssl.a */; };
 		CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5C18CCB997007B4808 /* libsteam.c */; };
 		CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5E18CCB997007B4808 /* steam_connection.c */; };
+		CDCA35AD19CEEA9D00E6E652 /* SteamOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */; };
+		CDCA35B219CEEF0F00E6E652 /* SteamSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,9 @@
 		CD8B2F5E18CCB997007B4808 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = "<group>"; };
 		CD8B2F5F18CCB997007B4808 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = "<group>"; };
 		CD8B2F6018CCB997007B4808 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
+		CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SteamOptions.xib; sourceTree = "<group>"; };
+		CDCA35B019CEEF0F00E6E652 /* SteamSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteamSettingsViewController.h; sourceTree = "<group>"; };
+		CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteamSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,7 @@
 		3BF9F90015D5E31E00322064 /* Steam IM */ = {
 			isa = PBXGroup;
 			children = (
+				CDCA35AE19CEEE1400E6E652 /* Settings */,
 				3BF9F90715D5E31E00322064 /* AISteamPlugin.h */,
 				3BF9F90815D5E31E00322064 /* AISteamPlugin.m */,
 				3B80170315D8CDDB00DA623D /* ESPurpleSteamAccount.h */,
@@ -199,6 +205,16 @@
 			name = Adium;
 			sourceTree = "<group>";
 		};
+		CDCA35AE19CEEE1400E6E652 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */,
+				CDCA35B019CEEF0F00E6E652 /* SteamSettingsViewController.h */,
+				CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +270,7 @@
 				3BF9F90515D5E31E00322064 /* InfoPlist.strings in Resources */,
 				3BC5C6DD15D879BC0097D6A3 /* steam_small.png in Resources */,
 				3BC5C6DE15D879BC0097D6A3 /* steam.png in Resources */,
+				CDCA35AD19CEEA9D00E6E652 /* SteamOptions.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +301,7 @@
 				CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */,
 				CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */,
 				3B1DDB0F15D8595700FA3B0E /* ESPurpleSteamAccount.m in Sources */,
+				CDCA35B219CEEF0F00E6E652 /* SteamSettingsViewController.m in Sources */,
 				3B1DDB1015D8595700FA3B0E /* ESSteamService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,6 +9,7 @@
 
 #import "ESSteamService.h"
 #import "ESPurpleSteamAccount.h"
+#import "SteamSettingsViewController.h"
 
 #import <Adium/AISharedAdium.h>
 #import <Adium/AIStatusControllerProtocol.h>
@@ -16,26 +17,23 @@
 #import <AIUtilities/AIImageAdditions.h>
 
 @implementation ESSteamService
+
 - (Class)accountClass {
 	return [ESPurpleSteamAccount class];
 }
 
-//Service Description
-- (NSString *)serviceCodeUniqueID {
-	return @"libpurple-steam";
-}
-- (NSString *)serviceID{
-	return @"Steam";
-}
-- (NSString *)serviceClass {
-	return @"Steam";
-}
-- (NSString *)shortDescription {
-	return @"Steam";
-}
-- (NSString *)longDescription {
-	return @"Steam IM";
-}
+// Service Description
+- (AIServiceImportance)serviceImportance { return AIServicePrimary; }
+- (NSString *) serviceCodeUniqueID       { return @"libpurple-steam"; }
+- (NSString *) serviceID                 { return @"Steam"; }
+- (NSString *) serviceClass              { return @"Steam"; }
+- (NSString *) shortDescription          { return @"Steam"; }
+- (NSString *) longDescription           { return @"Steam IM"; }
+- (NSUInteger) allowedLength             { return 64; }
+- (BOOL) requiresPassword                { return YES; }
+- (BOOL) supportsPassword                { return YES; }
+- (BOOL) caseSensitive                   { return NO; }
+- (BOOL) canRegisterNewAccounts          { return NO; }
 
 - (NSCharacterSet *)allowedCharacters {
   NSMutableCharacterSet *allowed = [NSMutableCharacterSet alphanumericCharacterSet];
@@ -45,15 +43,8 @@
   return allowed;
 }
 
-- (NSUInteger)allowedLength {
-	return 64;
-}
-
-- (BOOL)caseSensitive {
-	return NO;
-}
-- (AIServiceImportance)serviceImportance {
-	return AIServicePrimary;
+- (AIAccountViewController *) accountViewController {
+  return [[SteamSettingsViewController alloc] init];
 }
 
 - (NSString *)userNameLabel {
