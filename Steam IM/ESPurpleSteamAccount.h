@@ -14,4 +14,6 @@
 
 }
 
+- (PurpleAccount*) getPurpleAccount;
+
 @end

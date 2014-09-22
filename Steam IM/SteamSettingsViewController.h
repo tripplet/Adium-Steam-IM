@@ -10,11 +10,11 @@
 #import <AdiumLibpurple/PurpleAccountViewController.h>
 
 @interface SteamSettingsViewController : PurpleAccountViewController {
-  NSButton *alwaysHTTPS;
-  NSButton *changeIngameStatus;
-  
-  NSView *optionsView;
+  IBOutlet NSButton *alwaysHTTPS;
+  IBOutlet NSButton *changeIngameStatus;
+  IBOutlet NSTextField *steamGuardCode;
+  IBOutlet NSView *optionsView;
 }
-@property (nonatomic, assign) IBOutlet NSView *optionsView;
 
+@property (nonatomic, assign) IBOutlet NSView *optionsView;
 @end

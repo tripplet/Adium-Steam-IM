@@ -10,6 +10,7 @@
                 <outlet property="alwaysHTTPS" destination="fOd-MP-pcG" id="O82-8q-iMM"/>
                 <outlet property="changeIngameStatus" destination="tnH-EI-m54" id="Qfx-tG-Z5p"/>
                 <outlet property="optionsView" destination="c22-O7-iKe" id="WTz-1t-g6D"/>
+                <outlet property="steamGuardCode" destination="pUK-nc-4Gx" id="Xzr-Rh-eOp"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -19,15 +20,33 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button id="fOd-MP-pcG">
-                    <rect key="frame" x="18" y="155" width="139" height="18"/>
+                    <rect key="frame" x="158" y="119" width="139" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Always use HTTPS" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="btC-Bc-RPG">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
+                <textField verticalHuggingPriority="750" id="pUK-nc-4Gx">
+                    <rect key="frame" x="160" y="149" width="68" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="i2E-c6-CWq">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="OLN-cH-MLa">
+                    <rect key="frame" x="18" y="152" width="136" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Steam Guard Code:" id="Foa-FO-iBY">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <button id="tnH-EI-m54">
-                    <rect key="frame" x="18" y="129" width="203" height="18"/>
+                    <rect key="frame" x="158" y="93" width="203" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Change status when in-game" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zCK-7O-Z1J">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

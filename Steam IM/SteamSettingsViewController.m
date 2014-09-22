@@ -8,6 +8,7 @@
 
 #import "SteamSettingsViewController.h"
 #import <AdiumLibpurple/CBPurpleAccount.h>
+#import "ESPurpleSteamAccount.h"
 
 @interface SteamSettingsViewController()
 @end
@@ -27,10 +28,9 @@
 {
   [super configureForAccount:inAccount];
   
-  /* Disabled because libpurple updates the guard code
-  NSString *steam_guard_code = [account preferenceForKey:@"steam_guard_code" group:GROUP_ACCOUNT_STATUS] ?: @"";
-  [txtSteamGuardCode setStringValue:steam_guard_code];
-   */
+  // We need to get this from "purple_account_get_string" as it cant be updated by opensteamworks
+  PurpleAccount *pAccount = [((ESPurpleSteamAccount*)inAccount) getPurpleAccount];
+  [steamGuardCode setStringValue: [NSString stringWithUTF8String: purple_account_get_string(pAccount, "steam_guard_code", "")]];
   
   [alwaysHTTPS setState:[[account preferenceForKey:@"always_use_https" group:GROUP_ACCOUNT_STATUS] boolValue]];
   [changeIngameStatus setState:[[account preferenceForKey:@"change_status_to_game" group:GROUP_ACCOUNT_STATUS] boolValue]];
@@ -41,10 +41,10 @@
 {
   [super saveConfiguration];
   
-  /*
-   [account setPreference:(txtSteamGuardCode.stringValue.length > 0 ? txtSteamGuardCode.stringValue : nil)
-                  forKey:@"steam_guard_code" group:GROUP_ACCOUNT_STATUS];
-   */
+  if (steamGuardCode.stringValue.length > 0) {
+    [account setPreference:steamGuardCode.stringValue
+                    forKey:@"steam_guard_code" group:GROUP_ACCOUNT_STATUS];
+  }
   
   [account setPreference:[NSNumber numberWithBool:[alwaysHTTPS state]]
                   forKey:@"always_use_https" group:GROUP_ACCOUNT_STATUS];
