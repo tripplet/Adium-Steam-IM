@@ -9,16 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B1DDB0F15D8595700FA3B0E /* ESPurpleSteamAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DDB0C15D8595700FA3B0E /* ESPurpleSteamAccount.m */; };
 		3B1DDB1015D8595700FA3B0E /* ESSteamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */; };
-		3B28C0FA15D850250029F712 /* libjson-glib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C0F915D850250029F712 /* libjson-glib.framework */; };
-		3B28C10015D851660029F712 /* libintl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C0FF15D851660029F712 /* libintl.framework */; };
-		3B28C10515D8528B0029F712 /* libgobject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B28C10415D8528B0029F712 /* libgobject.framework */; };
-		3B2B72E5162B9023009DC257 /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2B72E4162B9023009DC257 /* libpurple.framework */; };
-		3B2B72E7162B9145009DC257 /* libglib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2B72E6162B9145009DC257 /* libglib.framework */; };
-		3B4B0C7715D9D4E2002A4B1D /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */; };
 		3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */; };
 		3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */; };
-		3B6A04F015D835AB0024F0D9 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A04EF15D835AB0024F0D9 /* Adium.framework */; };
-		3B6A04F315D8385C0024F0D9 /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */; };
 		3BC5C6DD15D879BC0097D6A3 /* steam_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5C6DB15D879BC0097D6A3 /* steam_small.png */; };
 		3BC5C6DE15D879BC0097D6A3 /* steam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC5C6DC15D879BC0097D6A3 /* steam.png */; };
 		3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF9F8FC15D5E31E00322064 /* Foundation.framework */; };
@@ -31,23 +23,23 @@
 		CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5E18CCB997007B4808 /* steam_connection.c */; };
 		CDCA35AD19CEEA9D00E6E652 /* SteamOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */; };
 		CDCA35B219CEEF0F00E6E652 /* SteamSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */; };
+		CDDE873019E1E69D00E6E652 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE872F19E1E69D00E6E652 /* Adium.framework */; };
+		CDDE873219E1E6C800E6E652 /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873119E1E6C800E6E652 /* AdiumLibpurple.framework */; };
+		CDDE873419E1E6FD00E6E652 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873319E1E6FD00E6E652 /* AIUtilities.framework */; };
+		CDDE873A19E1E72300E6E652 /* libglib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873519E1E72300E6E652 /* libglib.framework */; };
+		CDDE873B19E1E72300E6E652 /* libgobject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873619E1E72300E6E652 /* libgobject.framework */; };
+		CDDE873C19E1E72300E6E652 /* libintl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873719E1E72300E6E652 /* libintl.framework */; };
+		CDDE873D19E1E72300E6E652 /* libjson-glib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873819E1E72300E6E652 /* libjson-glib.framework */; };
+		CDDE873E19E1E72300E6E652 /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE873919E1E72300E6E652 /* libpurple.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B1DDB0C15D8595700FA3B0E /* ESPurpleSteamAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPurpleSteamAccount.m; sourceTree = "<group>"; };
 		3B1DDB0D15D8595700FA3B0E /* ESSteamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSteamService.h; sourceTree = "<group>"; };
 		3B1DDB0E15D8595700FA3B0E /* ESSteamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSteamService.m; sourceTree = "<group>"; };
-		3B28C0F915D850250029F712 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "libjson-glib.framework"; sourceTree = "<group>"; };
-		3B28C0FF15D851660029F712 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libintl.framework; sourceTree = "<group>"; };
-		3B28C10415D8528B0029F712 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libgobject.framework; sourceTree = "<group>"; };
-		3B2B72E4162B9023009DC257 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
-		3B2B72E6162B9145009DC257 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libglib.framework; sourceTree = SOURCE_ROOT; };
-		3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AIUtilities.framework; sourceTree = "<group>"; };
 		3B4B0C7E15D9D5A2002A4B1D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3B4B0C8015D9D5AD002A4B1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3B4BC5C215D8DA7400FB6876 /* Steam IM.AdiumLibpurplePlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Steam IM.AdiumLibpurplePlugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6A04EF15D835AB0024F0D9 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
-		3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdiumLibpurple.framework; sourceTree = "<group>"; };
 		3B80170315D8CDDB00DA623D /* ESPurpleSteamAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPurpleSteamAccount.h; sourceTree = "<group>"; };
 		3BC5C6DB15D879BC0097D6A3 /* steam_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steam_small.png; sourceTree = "<group>"; };
 		3BC5C6DC15D879BC0097D6A3 /* steam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steam.png; sourceTree = "<group>"; };
@@ -60,7 +52,6 @@
 		B1AD220F183D3043008163E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		CD448ADA182E459000954074 /* BuildConfig.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
 		CD7E816E186096BC0000F41D /* libpolarssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpolarssl.a; path = polarssl/build/library/libpolarssl.a; sourceTree = "<group>"; };
 		CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsteamworks.cpp; path = opensteamworks/libsteamworks.cpp; sourceTree = "<group>"; };
 		CD8B2F5918CCB972007B4808 /* libsteamworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteamworks.h; path = opensteamworks/libsteamworks.h; sourceTree = "<group>"; };
@@ -72,6 +63,14 @@
 		CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SteamOptions.xib; sourceTree = "<group>"; };
 		CDCA35B019CEEF0F00E6E652 /* SteamSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteamSettingsViewController.h; sourceTree = "<group>"; };
 		CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteamSettingsViewController.m; sourceTree = "<group>"; };
+		CDDE872F19E1E69D00E6E652 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = adium/build/Release/Adium.framework; sourceTree = "<group>"; };
+		CDDE873119E1E6C800E6E652 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdiumLibpurple.framework; path = adium/build/Release/AdiumLibpurple.framework; sourceTree = "<group>"; };
+		CDDE873319E1E6FD00E6E652 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = adium/build/Release/AIUtilities.framework; sourceTree = "<group>"; };
+		CDDE873519E1E72300E6E652 /* libglib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libglib.framework; path = adium/Frameworks/libglib.framework; sourceTree = "<group>"; };
+		CDDE873619E1E72300E6E652 /* libgobject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgobject.framework; path = adium/Frameworks/libgobject.framework; sourceTree = "<group>"; };
+		CDDE873719E1E72300E6E652 /* libintl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libintl.framework; path = adium/Frameworks/libintl.framework; sourceTree = "<group>"; };
+		CDDE873819E1E72300E6E652 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "adium/Frameworks/libjson-glib.framework"; sourceTree = "<group>"; };
+		CDDE873919E1E72300E6E652 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = adium/Frameworks/libpurple.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,14 +84,14 @@
 				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
 				3B4B0C8115D9D5AD002A4B1D /* Cocoa.framework in Frameworks */,
 				CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */,
-				3B6A04F015D835AB0024F0D9 /* Adium.framework in Frameworks */,
-				3B6A04F315D8385C0024F0D9 /* AdiumLibpurple.framework in Frameworks */,
-				3B28C0FA15D850250029F712 /* libjson-glib.framework in Frameworks */,
-				3B28C10015D851660029F712 /* libintl.framework in Frameworks */,
-				3B28C10515D8528B0029F712 /* libgobject.framework in Frameworks */,
-				3B4B0C7715D9D4E2002A4B1D /* AIUtilities.framework in Frameworks */,
-				3B2B72E5162B9023009DC257 /* libpurple.framework in Frameworks */,
-				3B2B72E7162B9145009DC257 /* libglib.framework in Frameworks */,
+				CDDE873019E1E69D00E6E652 /* Adium.framework in Frameworks */,
+				CDDE873419E1E6FD00E6E652 /* AIUtilities.framework in Frameworks */,
+				CDDE873219E1E6C800E6E652 /* AdiumLibpurple.framework in Frameworks */,
+				CDDE873D19E1E72300E6E652 /* libjson-glib.framework in Frameworks */,
+				CDDE873C19E1E72300E6E652 /* libintl.framework in Frameworks */,
+				CDDE873B19E1E72300E6E652 /* libgobject.framework in Frameworks */,
+				CDDE873E19E1E72300E6E652 /* libpurple.framework in Frameworks */,
+				CDDE873A19E1E72300E6E652 /* libglib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +144,6 @@
 		3BF9F90115D5E31E00322064 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CD448ADA182E459000954074 /* BuildConfig.xcconfig */,
 				3BC5C6DB15D879BC0097D6A3 /* steam_small.png */,
 				3BC5C6DC15D879BC0097D6A3 /* steam.png */,
 				3BF9F90215D5E31E00322064 /* Steam IM-Info.plist */,
@@ -193,14 +191,14 @@
 		CD9E90A618611956006C937B /* Adium */ = {
 			isa = PBXGroup;
 			children = (
-				3B2B72E6162B9145009DC257 /* libglib.framework */,
-				3B2B72E4162B9023009DC257 /* libpurple.framework */,
-				3B4B0C7615D9D4E2002A4B1D /* AIUtilities.framework */,
-				3B28C10415D8528B0029F712 /* libgobject.framework */,
-				3B28C0FF15D851660029F712 /* libintl.framework */,
-				3B28C0F915D850250029F712 /* libjson-glib.framework */,
-				3B6A04F215D8385C0024F0D9 /* AdiumLibpurple.framework */,
-				3B6A04EF15D835AB0024F0D9 /* Adium.framework */,
+				CDDE872F19E1E69D00E6E652 /* Adium.framework */,
+				CDDE873519E1E72300E6E652 /* libglib.framework */,
+				CDDE873619E1E72300E6E652 /* libgobject.framework */,
+				CDDE873719E1E72300E6E652 /* libintl.framework */,
+				CDDE873819E1E72300E6E652 /* libjson-glib.framework */,
+				CDDE873919E1E72300E6E652 /* libpurple.framework */,
+				CDDE873319E1E6FD00E6E652 /* AIUtilities.framework */,
+				CDDE873119E1E6C800E6E652 /* AdiumLibpurple.framework */,
 			);
 			name = Adium;
 			sourceTree = "<group>";
@@ -322,7 +320,6 @@
 /* Begin XCBuildConfiguration section */
 		3BF9F90A15D5E31E00322064 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD448ADA182E459000954074 /* BuildConfig.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -345,7 +342,6 @@
 		};
 		3BF9F90B15D5E31E00322064 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD448ADA182E459000954074 /* BuildConfig.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -370,17 +366,17 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(ADIUM_DEVELOP_PATH)/Frameworks",
-					"$(ADIUM_DEVELOP_PATH)/build/**",
+					"$(PROJECT_DIR)/adium/build/Release",
+					"$(PROJECT_DIR)/adium/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"$(ADIUM_DEVELOP_PATH)/Source/",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libglib.framework/Versions/Current/Headers",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libintl.framework/Versions/Current/Headers",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libjson-glib.framework/Versions/Current/Headers",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libpurple.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Source/",
+					"$(SOURCE_ROOT)/adium/Frameworks/libglib.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Frameworks/libintl.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Frameworks/libjson-glib.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
 					"$(SOURCE_ROOT)/polarssl/include",
 				);
@@ -402,17 +398,17 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(ADIUM_DEVELOP_PATH)/Frameworks",
-					"$(ADIUM_DEVELOP_PATH)/build/**",
+					"$(PROJECT_DIR)/adium/build/Release",
+					"$(PROJECT_DIR)/adium/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Steam IM/Steam IM-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"$(ADIUM_DEVELOP_PATH)/Source/",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libglib.framework/Versions/Current/Headers",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libintl.framework/Versions/Current/Headers",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libjson-glib.framework/Versions/Current/Headers",
-					"$(ADIUM_DEVELOP_PATH)/Frameworks/libpurple.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Source/",
+					"$(SOURCE_ROOT)/adium/Frameworks/libglib.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Frameworks/libintl.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Frameworks/libjson-glib.framework/Versions/Current/Headers",
+					"$(SOURCE_ROOT)/adium/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
 					"$(SOURCE_ROOT)/polarssl/include",
 				);
