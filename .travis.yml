@@ -5,4 +5,4 @@ before_install:
   - cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make; cd ../..
   - mkdir adium; cd adium; wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz
   - tar xf adium-1.5.10.tar.gz --strip-components=1;
-  - xctool -configuration Release -scheme Adium; cd ..
+  - xcodebuild -configuration Release -project Adium.xcodeproj | tail; cd ..
