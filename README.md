@@ -2,6 +2,8 @@ Adium-Steam-IM
 ==============
 Adium protocol plugin to support Steam instant messaging
 
+[![Build Status](https://travis-ci.org/tripplet/Adium-Steam-IM.svg?branch=master)](https://travis-ci.org/tripplet/Adium-Steam-IM)
+
 Download
 ========
 Download the working version 1.7.3 [here](https://github.com/tripplet/Adium-Steam-IM/releases/download/v1.7.3/AdiumSteamIM_v173.zip)
