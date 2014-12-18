@@ -19,13 +19,15 @@ Thanks
 
 ### How to build yourself
 1. Checkout this git repository
-2. Download Adium: 
+2. Init submodules: 
+   `git submodule init; git submodule update`
+3. Download Adium: 
    `mkdir adium; cd adium; wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz`
-2. Extract Adium:
+4. Extract Adium:
    `tar xf adium-1.5.10.tar.gz --strip-components=1;`
-3. Compile Adium:
+5. Compile Adium:
    `xcodebuild -configuration Release -project Adium.xcodeproj`
-4. Compile polarssl:
+6. Compile polarssl:
    `cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make`
-5. Compile the plugin:
+7. Compile the plugin:
    `xcodebuild -configuration Release -project "Steam IM.xcodeproj"`
