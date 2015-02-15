@@ -7,7 +7,6 @@
 
 # SVN
 opensteamworks/.svn/*
-adium
 
 # Xcode
 build/*
