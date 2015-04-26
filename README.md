@@ -23,7 +23,7 @@ Thanks
    `git submodule init; git submodule update`
 5. Compile Adium:
    `cd adium; xcodebuild -configuration Release -project Adium.xcodeproj`
-6. Compile polarssl:
-   `cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make`
+6. Compile mbedtls:
+   `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make`
 7. Compile the plugin:
    `xcodebuild -configuration Release -project "Steam IM.xcodeproj"`

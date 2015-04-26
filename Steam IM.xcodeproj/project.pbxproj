@@ -18,9 +18,9 @@
 		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
 		B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220F183D3043008163E2 /* libz.dylib */; };
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
-		CD7E816F186096BC0000F41D /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7E816E186096BC0000F41D /* libpolarssl.a */; };
 		CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5C18CCB997007B4808 /* libsteam.c */; };
 		CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5E18CCB997007B4808 /* steam_connection.c */; };
+		CD9A32FE1AED112A00E6E652 /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9A32FD1AED112A00E6E652 /* libmbedtls.a */; };
 		CDCA35AD19CEEA9D00E6E652 /* SteamOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */; };
 		CDCA35B219CEEF0F00E6E652 /* SteamSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */; };
 		CDDE873019E1E69D00E6E652 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE872F19E1E69D00E6E652 /* Adium.framework */; };
@@ -52,7 +52,6 @@
 		B1AD220F183D3043008163E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		CD7E816E186096BC0000F41D /* libpolarssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpolarssl.a; path = polarssl/build/library/libpolarssl.a; sourceTree = "<group>"; };
 		CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsteamworks.cpp; path = opensteamworks/libsteamworks.cpp; sourceTree = "<group>"; };
 		CD8B2F5918CCB972007B4808 /* libsteamworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteamworks.h; path = opensteamworks/libsteamworks.h; sourceTree = "<group>"; };
 		CD8B2F5C18CCB997007B4808 /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/steam-mobile/libsteam.c"; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		CD8B2F5E18CCB997007B4808 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = "<group>"; };
 		CD8B2F5F18CCB997007B4808 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = "<group>"; };
 		CD8B2F6018CCB997007B4808 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
+		CD9A32FD1AED112A00E6E652 /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = mbedtls/build/library/libmbedtls.a; sourceTree = "<group>"; };
 		CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SteamOptions.xib; sourceTree = "<group>"; };
 		CDCA35B019CEEF0F00E6E652 /* SteamSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteamSettingsViewController.h; sourceTree = "<group>"; };
 		CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteamSettingsViewController.m; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD7E816F186096BC0000F41D /* libpolarssl.a in Frameworks */,
+				CD9A32FE1AED112A00E6E652 /* libmbedtls.a in Frameworks */,
 				B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */,
 				3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */,
 				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
@@ -119,9 +119,9 @@
 		3BF9F8FB15D5E31E00322064 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD9A32FD1AED112A00E6E652 /* libmbedtls.a */,
 				CD9E90A518611945006C937B /* System */,
 				CD9E90A618611956006C937B /* Adium */,
-				CD7E816E186096BC0000F41D /* libpolarssl.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -378,12 +378,12 @@
 					"$(SOURCE_ROOT)/adium/Frameworks/libjson-glib.framework/Versions/Current/Headers",
 					"$(SOURCE_ROOT)/adium/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
-					"$(SOURCE_ROOT)/polarssl/include",
+					"$(SOURCE_ROOT)/mbedtls/include",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SOURCE_ROOT)/polarssl/build/library",
+					"$(PROJECT_DIR)/mbedtls/build/library",
 				);
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
@@ -410,12 +410,12 @@
 					"$(SOURCE_ROOT)/adium/Frameworks/libjson-glib.framework/Versions/Current/Headers",
 					"$(SOURCE_ROOT)/adium/Frameworks/libpurple.framework/Versions/Current/Headers",
 					"$(SRCROOT)/glib-headers",
-					"$(SOURCE_ROOT)/polarssl/include",
+					"$(SOURCE_ROOT)/mbedtls/include",
 				);
 				INFOPLIST_FILE = "Steam IM/Steam IM-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SOURCE_ROOT)/polarssl/build/library",
+					"$(PROJECT_DIR)/mbedtls/build/library",
 				);
 				OTHER_CFLAGS = "-DPURPLE_STATIC_PRPL";
 				OTHER_LDFLAGS = "-headerpad_max_install_names";

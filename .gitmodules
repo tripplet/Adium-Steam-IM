@@ -1,9 +1,9 @@
-[submodule "polarssl"]
-	path = polarssl
-	url = https://github.com/polarssl/polarssl.git
 [submodule "opensteamworks"]
 	path = opensteamworks
 	url = https://github.com/tripplet/pidgin-opensteamworks.git
 [submodule "adium"]
 	path = adium
 	url = https://github.com/adium/adium.git
+[submodule "mbedtls"]
+	path = mbedtls
+	url = https://github.com/ARMmbed/mbedtls.git

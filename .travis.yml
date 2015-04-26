@@ -2,5 +2,5 @@ language: objective-c
 xcode_project: Steam IM.xcodeproj
 xcode_scheme: Steam IM
 before_install:
-  - cd polarssl; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" ..; make; cd ../..
-  - cd adium; xcodebuild -configuration Release -project Adium.xcodeproj | tail; cd ..
+  - cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make; cd ../..
+  - cd adium; xcodebuild -configuration Release -project Adium.xcodeproj | tail; cd ..deploy:
