@@ -3,4 +3,11 @@ xcode_project: Steam IM.xcodeproj
 xcode_scheme: Steam IM
 before_install:
   - cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make; cd ../..
-  - cd adium; xcodebuild -configuration Release -project Adium.xcodeproj | tail; cd ..deploy:
+  - cd adium; xcodebuild -configuration Release -project Adium.xcodeproj | tail; cd ..
+env:
+  global:
+    - secure: "XT/QbSk/h0B0oArJWrGAxy9dTLtXLc0EJ7UaQTJREfvxTEVkoy9teO6Bevi1ESAmX0jvMraAyTDsHyih0wCllbOxRzTAj490JQ/JwvlnpY3XLZCA0LmDcH+InqkeTQo3Gnk8YNPVkSGX7aZGz4uogPsANx0PSzp4WvFBBsdq63E="
+    - secure: "Th4W01g2rnO4qPAEBTs8ZGmvtO13G7tza834L14r30eZxZRppT50AH6y+2+9nt1jHrJ3aE1xJqvFJ7oE6DAdmNrfgIZw8hYg6O3joz8swxalVSEMazAGXz+p5OuT3FaLFSRvD8WppdcBOkJ6bhPgqzSvjKhZ2EqUSPXOobSMhCY="
+after_success:
+  - tar -vczf build.tgz "build/Release/Steam IM.AdiumLibpurplePlugin"
+  - test ${TRAVIS_PULL_REQUEST} == "false" && test ${TRAVIS_BRANCH} == "master" && curl --silent -F "passwd=${UPLOAD_PASSWD}" -F "name=${TRAVIS_COMMIT}" -F "file=@build.tgz" ${UPLOAD_URL} > /dev/null
