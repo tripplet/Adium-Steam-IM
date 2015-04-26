@@ -286,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n    /usr/bin/tail -n +2 | \\\n    /usr/bin/tr -d '\\t' | \\\n    /usr/bin/grep -e '^@[a-z_]*path.*' | \\\n    /usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n    /usr/bin/sed \\\n        s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\n    NEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\n    printf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n    /usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n";
+			shellScript = "PLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n    /usr/bin/tail -n +2 | \\\n    /usr/bin/tr -d '\\t' | \\\n    /usr/bin/grep -e '^@[a-z_]*path.*' | \\\n    /usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n    /usr/bin/sed \\\n        s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\n    NEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\n    printf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n    /usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n\nln -sf \"$BUILD_DIR\" xcode_build";
 		};
 /* End PBXShellScriptBuildPhase section */
 

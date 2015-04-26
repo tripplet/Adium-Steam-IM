@@ -5,11 +5,9 @@
 # Temporary files
 *~
 
-# SVN
-opensteamworks/.svn/*
-
 # Xcode
 build/*
+xcode_build
 *.pbxuser
 !default.pbxuser
 *.mode1v3
