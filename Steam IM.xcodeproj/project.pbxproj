@@ -366,7 +366,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/adium/build/Release",
+					"$(PROJECT_DIR)/adium/build/Release-Debug",
 					"$(PROJECT_DIR)/adium/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -398,7 +398,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/adium/build/Release",
+					"$(PROJECT_DIR)/adium/build/Release-Debug",
 					"$(PROJECT_DIR)/adium/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
