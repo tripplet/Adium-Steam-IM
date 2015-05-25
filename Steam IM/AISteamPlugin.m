@@ -10,6 +10,7 @@
 #import "AISteamPlugin.h"
 #import "ESSteamService.h"
 #import "libsteam.h"
+//#import "CaptchaWindow.h"
 
 extern void purple_init_steam_plugin();
 
@@ -19,6 +20,9 @@ extern void purple_init_steam_plugin();
 {
   purple_init_steam_plugin();
   [ESSteamService registerService];
+  
+  //CaptchaWindow *x = [[CaptchaWindow alloc] init];
+  //int b = 4;
 }
 
 - (void)uninstallPlugin
@@ -40,7 +44,7 @@ extern void purple_init_steam_plugin();
 
 -(NSString *)pluginVersion
 {
-	return @"1.8";
+	return @"1.81";
 }
 
 -(NSString *)pluginDescription
