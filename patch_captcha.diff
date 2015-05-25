@@ -16,7 +16,7 @@ index 8ce096d..0429a02 100644
  	purple_request_fields(sa->pc, 
  		_("Steam "), _("Steam "), 
 -		_("Please verify you are human by typing the following"), 
-+		_("Paste the url in your browser and input the displayed "), 
++		_("Paste the url in your browser and input the displayed captcha"), 
  		fields, 
  		_("OK"), G_CALLBACK(steam__ok_cb), 
  		_("Logout"), G_CALLBACK(steam__cancel_cb), 
