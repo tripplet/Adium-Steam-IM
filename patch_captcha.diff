@@ -1,0 +1,22 @@
+diff --git a/opensteamworks/steam-mobile/libsteam.c b/opensteamworks/steam-mobile/libsteam.c
+index 8ce096d..0429a02 100644
+--- a/opensteamworks/steam-mobile/libsteam.c
++++ b/opensteamworks/steam-mobile/libsteam.c
+@@ -259,7 +259,7 @@ steam__image_cb(PurpleUtilFetchUrlData *url_data, gpointer userdata, cons
+ 	group = purple_request_field_group_new(NULL);
+ 	purple_request_fields_add_group(fields, group);
+ 	
+-	field = purple_request_field_image_new("_image", _("Image"), response, len);
++	field = purple_request_field_string_new("_image", _("Image url"), g_strdup_printf("https://steamcommunity.com/public/.php?gid=%s", sa->_gid), FALSE);
+ 	purple_request_field_group_add_field(group, field);
+ 	
+ 	field = purple_request_field_string_new("_response", _("Response"), "", FALSE);
+@@ -267,7 +267,7 @@ steam__image_cb(PurpleUtilFetchUrlData *url_data, gpointer userdata, cons
+ 	
+ 	purple_request_fields(sa->pc, 
+ 		_("Steam "), _("Steam "), 
+-		_("Please verify you are human by typing the following"), 
++		_("Paste the url in your browser and input the displayed "), 
+ 		fields, 
+ 		_("OK"), G_CALLBACK(steam__ok_cb), 
+ 		_("Logout"), G_CALLBACK(steam__cancel_cb), 
