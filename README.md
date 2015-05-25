@@ -22,7 +22,7 @@ Thanks
 2. Init submodules:
    `git submodule init; git submodule update`
 5. Compile Adium:
-   `cd adium; xcodebuild -configuration Release -project Adium.xcodeproj`
+   `cd adium; make`
 6. Compile mbedtls:
    `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make`
 7. Compile the plugin:
