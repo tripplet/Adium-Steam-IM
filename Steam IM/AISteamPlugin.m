@@ -40,12 +40,17 @@ extern void purple_init_steam_plugin();
 
 -(NSString *)pluginVersion
 {
-	return @"1.9";
+	return @"v1.9.1";
 }
 
 -(NSString *)pluginDescription
 {
 	return @"Steam";
+}
+
+-(NSString *)pluginURL
+{
+  return @"https://github.com/tripplet/Adium-Steam-IM#readme";
 }
 
 @end
