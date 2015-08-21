@@ -5,6 +5,8 @@
 # Temporary files
 *~
 
+builds/*
+
 # Xcode
 build/*
 xcode_build
