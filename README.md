@@ -18,9 +18,11 @@ Thanks
 1. Checkout this git repository
 2. Init submodules:
    `git submodule init; git submodule update`
-5. Compile Adium:
+3. Compile Adium:
    `cd adium; make`
-6. Compile mbedtls:
+4. Compile mbedtls:
    `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make`
-7. Compile the plugin:
+5. Apply the patch to opensteamworks
+   `patch -p0 < patch_captcha.diff`
+6. Compile the plugin:
    `xcodebuild -configuration Release -project "Steam IM.xcodeproj"`
