@@ -1,6 +1,6 @@
 [submodule "opensteamworks"]
 	path = opensteamworks
-	url = https://github.com/tripplet/pidgin-opensteamworks.git
+	url = https://github.com/EionRobb/pidgin-opensteamworks.git
 [submodule "adium"]
 	path = adium
 	url = https://github.com/adium/adium.git
