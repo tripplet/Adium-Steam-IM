@@ -10,7 +10,7 @@ Get the latest version [here](https://github.com/tripplet/Adium-Steam-IM/release
 
 Thanks
 ======
-* [Pidgin-Opensteamworks](https://code.google.com/p/pidgin-opensteamworks/)
+* [Pidgin-Opensteamworks](https://github.com/eionrobb/pidgin-opensteamworks)
 * Old code from http://www.adiumxtras.com/index.php?a=xtras&xtra_id=8339
 
 
