@@ -10,6 +10,9 @@
 #import "AISteamPlugin.h"
 #import "ESSteamService.h"
 #import "libsteam.h"
+#import "mbedtls/version.h"
+
+#import <Adium/ESDebugAILog.h>
 
 extern void purple_init_steam_plugin();
 
@@ -31,6 +34,10 @@ extern void purple_init_steam_plugin();
 
 - (void)loadLibpurplePlugin
 {
+  AILog(@"Loading SteamIM plugin %s ("
+        MBEDTLS_VERSION_STRING_FULL", "
+        "pidgin-opensteamworks "STEAM_PLUGIN_VERSION
+        ")",[[self pluginVersion] UTF8String]);
 }
 
 - (NSString *)pluginAuthor
