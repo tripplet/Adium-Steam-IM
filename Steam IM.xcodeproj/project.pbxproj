@@ -20,7 +20,7 @@
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
 		CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5C18CCB997007B4808 /* libsteam.c */; };
 		CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5E18CCB997007B4808 /* steam_connection.c */; };
-		CD9A32FE1AED112A00E6E652 /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9A32FD1AED112A00E6E652 /* libmbedtls.a */; };
+		CDB1381E1B93ACDC00E6E652 /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB1381D1B93ACDC00E6E652 /* libmbedcrypto.a */; };
 		CDCA35AD19CEEA9D00E6E652 /* SteamOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */; };
 		CDCA35B219CEEF0F00E6E652 /* SteamSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */; };
 		CDDE873019E1E69D00E6E652 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDDE872F19E1E69D00E6E652 /* Adium.framework */; };
@@ -59,7 +59,7 @@
 		CD8B2F5E18CCB997007B4808 /* steam_connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_connection.c; path = "opensteamworks/steam-mobile/steam_connection.c"; sourceTree = "<group>"; };
 		CD8B2F5F18CCB997007B4808 /* steam_connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = steam_connection.h; path = "opensteamworks/steam-mobile/steam_connection.h"; sourceTree = "<group>"; };
 		CD8B2F6018CCB997007B4808 /* steam_rsa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = steam_rsa.c; path = "opensteamworks/steam-mobile/steam_rsa.c"; sourceTree = "<group>"; };
-		CD9A32FD1AED112A00E6E652 /* libmbedtls.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedtls.a; path = mbedtls/build/library/libmbedtls.a; sourceTree = "<group>"; };
+		CDB1381D1B93ACDC00E6E652 /* libmbedcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmbedcrypto.a; path = mbedtls/build/library/libmbedcrypto.a; sourceTree = "<group>"; };
 		CDCA35AC19CEEA9D00E6E652 /* SteamOptions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SteamOptions.xib; sourceTree = "<group>"; };
 		CDCA35B019CEEF0F00E6E652 /* SteamSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteamSettingsViewController.h; sourceTree = "<group>"; };
 		CDCA35B119CEEF0F00E6E652 /* SteamSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteamSettingsViewController.m; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9A32FE1AED112A00E6E652 /* libmbedtls.a in Frameworks */,
+				CDB1381E1B93ACDC00E6E652 /* libmbedcrypto.a in Frameworks */,
 				B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */,
 				3BF9F8FD15D5E31E00322064 /* Foundation.framework in Frameworks */,
 				3B4B0C7F15D9D5A2002A4B1D /* AppKit.framework in Frameworks */,
@@ -119,7 +119,7 @@
 		3BF9F8FB15D5E31E00322064 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CD9A32FD1AED112A00E6E652 /* libmbedtls.a */,
+				CDB1381D1B93ACDC00E6E652 /* libmbedcrypto.a */,
 				CD9E90A518611945006C937B /* System */,
 				CD9E90A618611956006C937B /* Adium */,
 			);
@@ -329,7 +329,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = USE_POLARSSL_CRYPTO;
+				GCC_PREPROCESSOR_DEFINITIONS = USE_MBEDTLS_CRYPTO;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -350,7 +350,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = USE_POLARSSL_CRYPTO;
+				GCC_PREPROCESSOR_DEFINITIONS = USE_MBEDTLS_CRYPTO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
