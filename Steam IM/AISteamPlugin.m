@@ -47,7 +47,7 @@ extern void purple_init_steam_plugin();
 
 -(NSString *)pluginVersion
 {
-	return @"v1.10";
+	return @"v1.20";
 }
 
 -(NSString *)pluginDescription
