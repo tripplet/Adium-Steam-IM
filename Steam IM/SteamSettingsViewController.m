@@ -10,6 +10,11 @@
 #import <AdiumLibpurple/CBPurpleAccount.h>
 #import "ESPurpleSteamAccount.h"
 
+enum identifyAsTag {
+    IDENTIFY_AS_MOBILE = 0,
+    IDENTIFY_AS_WEB = 1
+};
+
 @interface SteamSettingsViewController()
 @end
 
@@ -34,6 +39,12 @@
   
   [alwaysHTTPS setState:[[account preferenceForKey:@"always_use_https" group:GROUP_ACCOUNT_STATUS] boolValue]];
   [changeIngameStatus setState:[[account preferenceForKey:@"change_status_to_game" group:GROUP_ACCOUNT_STATUS] boolValue]];
+  [downloadOfflineHistory setState:[[account preferenceForKey:@"download_offline_history" group:GROUP_ACCOUNT_STATUS] boolValue]];
+
+  enum identifyAsTag identifyTag = IDENTIFY_AS_WEB;
+  if ([[account preferenceForKey:@"ui_mode" group:GROUP_ACCOUNT_STATUS] isEqualToString:@"mobile"])
+    identifyTag = IDENTIFY_AS_MOBILE;
+  [identifyAs selectCellWithTag:identifyTag];
 }
 
 //Save controls
@@ -51,6 +62,26 @@
   
   [account setPreference:[NSNumber numberWithBool:[changeIngameStatus state]]
                   forKey:@"change_status_to_game" group:GROUP_ACCOUNT_STATUS];
+
+  [account setPreference:[NSNumber numberWithBool:[downloadOfflineHistory state]]
+                 forKey:@"download_offline_history" group:GROUP_ACCOUNT_STATUS];
+
+  NSInteger identifyTag = [identifyAs selectedTag];
+  NSString* identifyStr = nil;
+  switch (identifyTag) {
+    case IDENTIFY_AS_MOBILE:
+      identifyStr = @"mobile";
+      break;
+    case IDENTIFY_AS_WEB:
+      identifyStr = @"web";
+      break;
+    default:
+      identifyStr = @"web";
+  }
+    
+  if (identifyStr) {
+    [account setPreference:identifyStr forKey:@"ui_mode" group:GROUP_ACCOUNT_STATUS];
+  }
 }
 
 @end

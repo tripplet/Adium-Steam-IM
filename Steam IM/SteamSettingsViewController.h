@@ -12,6 +12,8 @@
 @interface SteamSettingsViewController : PurpleAccountViewController {
   IBOutlet NSButton *alwaysHTTPS;
   IBOutlet NSButton *changeIngameStatus;
+  IBOutlet NSButton *downloadOfflineHistory;
+  IBOutlet NSMatrix *identifyAs;
   IBOutlet NSTextField *steamGuardCode;
   IBOutlet NSView *optionsView;
 }

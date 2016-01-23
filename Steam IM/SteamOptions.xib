@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1060" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SteamSettingsViewController">
             <connections>
                 <outlet property="alwaysHTTPS" destination="fOd-MP-pcG" id="O82-8q-iMM"/>
                 <outlet property="changeIngameStatus" destination="tnH-EI-m54" id="Qfx-tG-Z5p"/>
+                <outlet property="downloadOfflineHistory" destination="DRh-ls-1Ld" id="TMg-lp-Kc5"/>
+                <outlet property="identifyAs" destination="QQT-R7-Qdb" id="uAb-To-4mY"/>
                 <outlet property="optionsView" destination="c22-O7-iKe" id="WTz-1t-g6D"/>
                 <outlet property="steamGuardCode" destination="pUK-nc-4Gx" id="Xzr-Rh-eOp"/>
             </connections>
@@ -53,6 +55,46 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
+                <button id="DRh-ls-1Ld">
+                    <rect key="frame" x="158" y="73" width="176" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Download offline history" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="yPj-c7-t2m">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="O4N-BA-L57">
+                    <rect key="frame" x="30" y="45" width="124" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Identify as:" id="wmt-mL-LzH">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" id="QQT-R7-Qdb">
+                    <rect key="frame" x="160" y="20" width="61" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    <size key="cellSize" width="63" height="18"/>
+                    <size key="intercellSpacing" width="4" height="2"/>
+                    <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="Wwj-ED-KqC">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <cells>
+                        <column>
+                            <buttonCell type="radio" title="Web" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="XxT-PQ-BpW">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <buttonCell type="radio" title="Mobile" imagePosition="left" alignment="left" inset="2" id="Lul-cx-DEF">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                        </column>
+                    </cells>
+                </matrix>
             </subviews>
             <point key="canvasLocation" x="294.5" y="266.5"/>
         </customView>
