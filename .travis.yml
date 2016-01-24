@@ -4,7 +4,6 @@ xcode_scheme: Steam IM
 before_install:
   - cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make; cd ../..
   - cd adium; make | tail; cd ..
-  - patch -p0 < patch_captcha.diff
 env:
   global:
     - secure: "XT/QbSk/h0B0oArJWrGAxy9dTLtXLc0EJ7UaQTJREfvxTEVkoy9teO6Bevi1ESAmX0jvMraAyTDsHyih0wCllbOxRzTAj490JQ/JwvlnpY3XLZCA0LmDcH+InqkeTQo3Gnk8YNPVkSGX7aZGz4uogPsANx0PSzp4WvFBBsdq63E="
