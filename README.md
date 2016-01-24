@@ -22,7 +22,5 @@ Thanks
    `cd adium; make`
 4. Compile mbedtls:
    `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make`
-5. Apply the patch to opensteamworks
-   `patch -p0 < patch_captcha.diff`
-6. Compile the plugin:
+5. Compile the plugin:
    `xcodebuild -configuration Release -project "Steam IM.xcodeproj"`
