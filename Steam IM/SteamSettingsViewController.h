@@ -2,9 +2,7 @@
 //  SteamSettingsViewController.h
 //  Steam IM
 //
-//  Created by Tobias Tangemann on 21.09.14.
-//  Copyright (c) 2014 Hermi. All rights reserved.
-//
+//  Created by Tobias Tangemann on 21.09.14
 
 #import <Cocoa/Cocoa.h>
 #import <AdiumLibpurple/PurpleAccountViewController.h>

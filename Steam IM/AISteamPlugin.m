@@ -11,6 +11,7 @@
 #import "ESSteamService.h"
 #import "libsteam.h"
 #import "mbedtls/version.h"
+#import "NSString+CompareToVersion.h"
 
 #import <Adium/ESDebugAILog.h>
 
@@ -38,6 +39,30 @@ extern void purple_init_steam_plugin();
         MBEDTLS_VERSION_STRING_FULL", "
         "pidgin-opensteamworks "STEAM_PLUGIN_VERSION
         ")",[[self pluginVersion] UTF8String]);
+
+  [self updateCheck];
+}
+
+- (void) updateCheck
+{
+    NSString *url_updateCheck = @"https://api.github.com/repos/tripplet/Adium-Steam-IM/releases/latest";
+
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url_updateCheck]];
+    __block NSDictionary *json;
+
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+
+         NSString *latestVersion = [json objectForKey:@"name"];
+         BOOL isPrerelease = [[json objectForKey:@"prerelease"] boolValue];
+
+         if (!isPrerelease && [[self pluginVersion] isOlderThanVersion:latestVersion]) {
+             AILog(@"SteamIM plugin update available");
+         }
+     }];
 }
 
 - (NSString *)pluginAuthor

@@ -18,6 +18,7 @@
 		3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9F90815D5E31E00322064 /* AISteamPlugin.m */; };
 		B1AD2210183D3043008163E2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AD220F183D3043008163E2 /* libz.dylib */; };
 		CD321DDF182E5AA8003B36A8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD321DDE182E5AA8003B36A8 /* Security.framework */; };
+		CD81A0511C59821500E6E652 /* NSString+CompareToVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = CD81A0501C59821500E6E652 /* NSString+CompareToVersion.m */; };
 		CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5C18CCB997007B4808 /* libsteam.c */; };
 		CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */ = {isa = PBXBuildFile; fileRef = CD8B2F5E18CCB997007B4808 /* steam_connection.c */; };
 		CDB1381E1B93ACDC00E6E652 /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB1381D1B93ACDC00E6E652 /* libmbedcrypto.a */; };
@@ -52,6 +53,8 @@
 		B1AD220F183D3043008163E2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		CD321D94182E51F4003B36A8 /* glib-headers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "glib-headers"; sourceTree = "<group>"; };
 		CD321DDE182E5AA8003B36A8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CD81A04F1C59821500E6E652 /* NSString+CompareToVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+CompareToVersion.h"; path = "compareToVersion/Library/NSString+CompareToVersion.h"; sourceTree = "<group>"; };
+		CD81A0501C59821500E6E652 /* NSString+CompareToVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+CompareToVersion.m"; path = "compareToVersion/Library/NSString+CompareToVersion.m"; sourceTree = "<group>"; };
 		CD8B2F5818CCB972007B4808 /* libsteamworks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = libsteamworks.cpp; path = opensteamworks/libsteamworks.cpp; sourceTree = "<group>"; };
 		CD8B2F5918CCB972007B4808 /* libsteamworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libsteamworks.h; path = opensteamworks/libsteamworks.h; sourceTree = "<group>"; };
 		CD8B2F5C18CCB997007B4808 /* libsteam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = libsteam.c; path = "opensteamworks/steam-mobile/libsteam.c"; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 			children = (
 				CD448AD7182E43C600954074 /* pidgin-opensteamworks */,
 				3BF9F90015D5E31E00322064 /* Steam IM */,
+				CD81A04E1C597F0B00E6E652 /* CompareToVersion */,
 				3BF9F8FB15D5E31E00322064 /* Frameworks */,
 				3B4BC5C815D8DA8100FB6876 /* Products */,
 			);
@@ -162,6 +166,15 @@
 				CD321D94182E51F4003B36A8 /* glib-headers */,
 			);
 			name = "pidgin-opensteamworks";
+			sourceTree = "<group>";
+		};
+		CD81A04E1C597F0B00E6E652 /* CompareToVersion */ = {
+			isa = PBXGroup;
+			children = (
+				CD81A04F1C59821500E6E652 /* NSString+CompareToVersion.h */,
+				CD81A0501C59821500E6E652 /* NSString+CompareToVersion.m */,
+			);
+			name = CompareToVersion;
 			sourceTree = "<group>";
 		};
 		CD8B2F5B18CCB986007B4808 /* steam-mobile */ = {
@@ -297,6 +310,7 @@
 			files = (
 				3BF9F90915D5E31E00322064 /* AISteamPlugin.m in Sources */,
 				CD8B2F6118CCB997007B4808 /* libsteam.c in Sources */,
+				CD81A0511C59821500E6E652 /* NSString+CompareToVersion.m in Sources */,
 				CD8B2F6218CCB997007B4808 /* steam_connection.c in Sources */,
 				3B1DDB0F15D8595700FA3B0E /* ESPurpleSteamAccount.m in Sources */,
 				CDCA35B219CEEF0F00E6E652 /* SteamSettingsViewController.m in Sources */,

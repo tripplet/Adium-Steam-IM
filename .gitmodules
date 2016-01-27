@@ -7,3 +7,6 @@
 [submodule "mbedtls"]
 	path = mbedtls
 	url = https://github.com/ARMmbed/mbedtls.git
+[submodule "compareToVersion"]
+	path = compareToVersion
+	url = https://github.com/stijnster/NSString-compareToVersion.git
