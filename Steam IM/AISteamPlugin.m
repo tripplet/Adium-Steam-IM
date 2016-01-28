@@ -35,11 +35,7 @@ extern void purple_init_steam_plugin();
 - (NSString *)pluginAuthor      { return @"Tobias Tangemann, Eion Robb <eion@robbmob.com>"; }
 - (NSString *)pluginDescription { return @"Steam"; }
 - (NSString *)pluginURL         { return @"https://github.com/tripplet/Adium-Steam-IM#readme"; }
-
-- (NSString *)pluginVersion
-{
-  return [NSString stringWithFormat:@"v%@", [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"]];
-}
+- (NSString *)pluginVersion     { return [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"]; }
 
 - (void)uninstallPlugin {}
 - (void)installLibpurplePlugin {}
