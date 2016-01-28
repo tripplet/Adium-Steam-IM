@@ -26,10 +26,8 @@ extern void purple_init_steam_plugin();
 
 - (void)loadLibpurplePlugin
 {
-  AILog(@"Loading SteamIM plugin %s ("
-        MBEDTLS_VERSION_STRING_FULL", "
-        "pidgin-opensteamworks "STEAM_PLUGIN_VERSION
-        ")",[[self pluginVersion] UTF8String]);
+  AILog(@"Loading SteamIM plugin %s ("MBEDTLS_VERSION_STRING_FULL", pidgin-opensteamworks "STEAM_PLUGIN_VERSION")",
+        [[self pluginVersion] UTF8String]);
 }
 
 - (NSString *)pluginAuthor      { return @"Tobias Tangemann, Eion Robb <eion@robbmob.com>"; }
