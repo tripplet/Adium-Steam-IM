@@ -25,14 +25,6 @@ extern void purple_init_steam_plugin();
   [ESSteamService registerService];
 }
 
-- (void)uninstallPlugin
-{
-}
-
-- (void)installLibpurplePlugin
-{
-}
-
 - (void)loadLibpurplePlugin
 {
   AILog(@"Loading SteamIM plugin %s ("
@@ -65,24 +57,16 @@ extern void purple_init_steam_plugin();
      }];
 }
 
-- (NSString *)pluginAuthor
+- (NSString *)pluginAuthor      { return @"Tobias Tangemann, Eion Robb <eion@robbmob.com>"; }
+- (NSString *)pluginDescription { return @"Steam"; }
+- (NSString *)pluginURL         { return @"https://github.com/tripplet/Adium-Steam-IM#readme"; }
+
+- (NSString *)pluginVersion
 {
-	return @"Tobias Tangemann, Hermi <Hermi.Hg@gmail.com>, Eion Robb <eion@robbmob.com>";
+  return [NSString stringWithFormat:@"v%@", [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"]];
 }
 
--(NSString *)pluginVersion
-{
-	return @"v1.20";
-}
-
--(NSString *)pluginDescription
-{
-	return @"Steam";
-}
-
--(NSString *)pluginURL
-{
-  return @"https://github.com/tripplet/Adium-Steam-IM#readme";
-}
+- (void)uninstallPlugin {}
+- (void)installLibpurplePlugin {}
 
 @end
