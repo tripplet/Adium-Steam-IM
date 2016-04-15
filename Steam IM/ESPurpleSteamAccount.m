@@ -8,12 +8,13 @@
  */
 
 #import "ESPurpleSteamAccount.h"
+#import "libsteam.h"
 
 @implementation ESPurpleSteamAccount
 
 - (const char*)protocolPlugin
 {
-	return "prpl-steam-mobile";
+	return STEAM_PLUGIN_ID;
 }
 
 - (PurpleAccount *)getPurpleAccount {
