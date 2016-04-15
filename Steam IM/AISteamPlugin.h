@@ -10,7 +10,7 @@
 #import <Adium/AIPlugin.h>
 #import <AdiumLibpurple/AILibpurplePlugin.h>
 
-@interface AISteamPlugin : AIPlugin <AILibpurplePlugin> {
+@interface AISteamPlugin : AIPlugin <AILibpurplePlugin, NSUserNotificationCenterDelegate> {
 
 }
 
