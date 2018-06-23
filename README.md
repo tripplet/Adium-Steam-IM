@@ -18,7 +18,7 @@ Thanks
 ### How to build yourself
 1. Checkout this git repository
 2. Init submodules:
-   `git submodule init; git submodule update`
+   `git submodule update --init`
 3. Compile Adium:
    `cd adium; make`
 4. Compile mbedtls:
