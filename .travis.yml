@@ -1,10 +1,9 @@
 language: objective-c
-xcode_project: Steam IM.xcodeproj
-xcode_scheme: Steam IM
 before_install:
   - brew install openssl
   - cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make; cd ../..
   - git apply adium.patch; cd adium; make | tail; cd ..
+script: xcodebuild
 env:
   global:
     - secure: "XT/QbSk/h0B0oArJWrGAxy9dTLtXLc0EJ7UaQTJREfvxTEVkoy9teO6Bevi1ESAmX0jvMraAyTDsHyih0wCllbOxRzTAj490JQ/JwvlnpY3XLZCA0LmDcH+InqkeTQo3Gnk8YNPVkSGX7aZGz4uogPsANx0PSzp4WvFBBsdq63E="
