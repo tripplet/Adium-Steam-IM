@@ -1,8 +1,8 @@
 language: objective-c
 before_install:
   - brew install openssl
-  - cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make; cd ../..
-  - git apply adium.patch; cd adium; make | tail; cd ..
+  - cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make -j; cd ../..
+  - git apply adium.patch; cd adium; make -j| tail; cd ..
 script: xcodebuild
 env:
   global:
