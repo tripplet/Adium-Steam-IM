@@ -1,5 +1,5 @@
 diff --git a/Adium.xcodeproj/project.pbxproj b/Adium.xcodeproj/project.pbxproj
-index 1ef51f738..3bcecf949 100644
+index 1ef51f738..4aa82fc61 100644
 --- a/adium/Adium.xcodeproj/project.pbxproj
 +++ b/adium/Adium.xcodeproj/project.pbxproj
 @@ -61,8 +61,6 @@
@@ -123,7 +123,15 @@ index 1ef51f738..3bcecf949 100644
  		7E6F8A94105611B700C6D80D /* libotr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6F8A93105611B700C6D80D /* libotr.framework */; };
  		7E6F8ACD105613AD00C6D80D /* libotr.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6F8A93105611B700C6D80D /* libotr.framework */; };
  		7E824CDD06387FAF00813072 /* LinkEditor.nib in Resources */ = {isa = PBXBuildFile; fileRef = 7E824CCE06387FAF00813072 /* LinkEditor.nib */; };
-@@ -1466,7 +1435,6 @@
+@@ -1435,7 +1404,6 @@
+ 		979AA6A714D59DC8008730DF /* AIBoolToControlTextColorTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 979AA6A514D59DC8008730DF /* AIBoolToControlTextColorTransformer.h */; settings = {ATTRIBUTES = (); }; };
+ 		979AA6A814D59DC8008730DF /* AIBoolToControlTextColorTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 979AA6A614D59DC8008730DF /* AIBoolToControlTextColorTransformer.m */; };
+ 		97AF5CDB13191DE200550C41 /* AIContactListUserPictureMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AF5CDA13191DE200550C41 /* AIContactListUserPictureMenuController.m */; };
+-		97AF5CF413191E9A00550C41 /* ContactListChangeUserPictureMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AF5CF313191E9A00550C41 /* ContactListChangeUserPictureMenu.xib */; };
+ 		97E4B4FF13E7490000A8BA53 /* AboutDialog_transp_btm.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E4B4FB13E7490000A8BA53 /* AboutDialog_transp_btm.png */; };
+ 		97E4B50013E7490000A8BA53 /* AboutDialog_transp_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E4B4FC13E7490000A8BA53 /* AboutDialog_transp_top.png */; };
+ 		97E4B50113E7490000A8BA53 /* Flap_192.png in Resources */ = {isa = PBXBuildFile; fileRef = 97E4B4FD13E7490000A8BA53 /* Flap_192.png */; };
+@@ -1466,7 +1434,6 @@
  		EE147A800896B33400A21377 /* OWABSearchWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE147A7E0896B33400A21377 /* OWABSearchWindowController.m */; };
  		EE5754ED0B3D7A7A00100989 /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 638392F609D4D67A0067B9B7 /* Sparkle.framework */; };
  		EEC461B6096D68580028632F /* OWSpellingPerContactPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC461B4096D68580028632F /* OWSpellingPerContactPlugin.m */; };
@@ -131,7 +139,7 @@ index 1ef51f738..3bcecf949 100644
  		F51BCD3B0A156261000FDC06 /* AutoHyperlinks.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3496A8EA07CE6CA30055BBAB /* AutoHyperlinks.framework */; };
  		F51BCEEA0A15793E000FDC06 /* AutoHyperlinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3496A8EA07CE6CA30055BBAB /* AutoHyperlinks.framework */; };
  		F5F8CA4D0A1A9C9400154550 /* GBQuestionHandlerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F8CA4B0A1A9C9400154550 /* GBQuestionHandlerPlugin.m */; };
-@@ -1730,9 +1698,6 @@
+@@ -1730,9 +1697,6 @@
  		110763F908676D04005987A5 /* BlockEditorWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = BlockEditorWindow.nib; path = Resources/BlockEditorWindow.nib; sourceTree = "<group>"; };
  		11077B6D0DE647C100A4DD25 /* AIStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIStatusItemView.h; path = "Plugins/Status Menu Item/AIStatusItemView.h"; sourceTree = "<group>"; };
  		11077B6E0DE647C100A4DD25 /* AIStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIStatusItemView.m; path = "Plugins/Status Menu Item/AIStatusItemView.m"; sourceTree = "<group>"; };
@@ -141,7 +149,7 @@ index 1ef51f738..3bcecf949 100644
  		1111B22F0F8478500068CE51 /* Filter Bar.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = "Filter Bar.nib"; path = "Resources/Filter Bar.nib"; sourceTree = "<group>"; };
  		1111B2660F847CAD0068CE51 /* AIFilterBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIFilterBarView.h; path = Source/AIFilterBarView.h; sourceTree = "<group>"; };
  		1111B2670F847CAD0068CE51 /* AIFilterBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIFilterBarView.m; path = Source/AIFilterBarView.m; sourceTree = "<group>"; };
-@@ -1746,8 +1711,6 @@
+@@ -1746,8 +1710,6 @@
  		111E89000F93FE3900A5F18B /* AIUserHostTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIUserHostTooltip.m; path = Source/AIUserHostTooltip.m; sourceTree = "<group>"; };
  		1121B2980F896A720047EC66 /* AIContactVisibilityControlPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIContactVisibilityControlPlugin.h; path = Source/AIContactVisibilityControlPlugin.h; sourceTree = "<group>"; };
  		1121B2990F896A720047EC66 /* AIContactVisibilityControlPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIContactVisibilityControlPlugin.m; path = Source/AIContactVisibilityControlPlugin.m; sourceTree = "<group>"; };
@@ -150,7 +158,7 @@ index 1ef51f738..3bcecf949 100644
  		112939010FD5AC1B00FA8F53 /* AIConfirmationsAdvancedPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AIConfirmationsAdvancedPreferences.nib; path = Resources/AIConfirmationsAdvancedPreferences.nib; sourceTree = "<group>"; };
  		1129390E0FD5AE1400FA8F53 /* AIConfirmationsAdvancedPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIConfirmationsAdvancedPreferences.h; path = Source/AIConfirmationsAdvancedPreferences.h; sourceTree = "<group>"; };
  		1129390F0FD5AE1400FA8F53 /* AIConfirmationsAdvancedPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIConfirmationsAdvancedPreferences.m; path = Source/AIConfirmationsAdvancedPreferences.m; sourceTree = "<group>"; };
-@@ -1761,21 +1724,9 @@
+@@ -1761,21 +1723,9 @@
  		112B4A230F83194700690E84 /* AIMentionAdvancedPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIMentionAdvancedPreferences.h; path = Source/AIMentionAdvancedPreferences.h; sourceTree = "<group>"; };
  		112B4A240F83194700690E84 /* AIMentionAdvancedPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIMentionAdvancedPreferences.m; path = Source/AIMentionAdvancedPreferences.m; sourceTree = "<group>"; };
  		112B4A3D0F831A4400690E84 /* AIMentionAdvancedPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AIMentionAdvancedPreferences.nib; path = Resources/AIMentionAdvancedPreferences.nib; sourceTree = "<group>"; };
@@ -172,7 +180,7 @@ index 1ef51f738..3bcecf949 100644
  		113900B00F85BEF60081A418 /* AIURLHandlerPreferences.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = AIURLHandlerPreferences.nib; path = Resources/AIURLHandlerPreferences.nib; sourceTree = "<group>"; };
  		113900B20F85BF880081A418 /* AIURLHandlerAdvancedPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIURLHandlerAdvancedPreferences.h; path = Source/AIURLHandlerAdvancedPreferences.h; sourceTree = "<group>"; };
  		113900B30F85BF880081A418 /* AIURLHandlerAdvancedPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIURLHandlerAdvancedPreferences.m; path = Source/AIURLHandlerAdvancedPreferences.m; sourceTree = "<group>"; };
-@@ -1852,8 +1803,6 @@
+@@ -1852,8 +1802,6 @@
  		118A444F0FEEA828008153C0 /* libjson-glib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "libjson-glib.framework"; path = "Frameworks/libjson-glib.framework"; sourceTree = "<group>"; };
  		1192E6B10FD30307003CAEF5 /* AIAnnoyingIRCMessagesHiderPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIAnnoyingIRCMessagesHiderPlugin.h; path = "Plugins/Purple Service/AIAnnoyingIRCMessagesHiderPlugin.h"; sourceTree = "<group>"; };
  		1192E6B20FD30307003CAEF5 /* AIAnnoyingIRCMessagesHiderPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIAnnoyingIRCMessagesHiderPlugin.m; path = "Plugins/Purple Service/AIAnnoyingIRCMessagesHiderPlugin.m"; sourceTree = "<group>"; };
@@ -181,7 +189,7 @@ index 1ef51f738..3bcecf949 100644
  		1199AB0310BE13E600646322 /* Authorize.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Authorize.tiff; path = "Frameworks/Adium Framework/Resources/Authorize.tiff"; sourceTree = "<group>"; };
  		1199AB0410BE13E600646322 /* Deny.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Deny.tiff; path = "Frameworks/Adium Framework/Resources/Deny.tiff"; sourceTree = "<group>"; };
  		1199AB0510BE13E600646322 /* Ignore.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = Ignore.tiff; path = "Frameworks/Adium Framework/Resources/Ignore.tiff"; sourceTree = "<group>"; };
-@@ -1867,8 +1816,6 @@
+@@ -1867,8 +1815,6 @@
  		11AE52010F68CA5000BE8077 /* AIPurpleOscarAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIPurpleOscarAccountViewController.m; path = "Plugins/Purple Service/AIPurpleOscarAccountViewController.m"; sourceTree = "<group>"; };
  		11AE5554109CC88C0074BDC2 /* pref-confirmations.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "pref-confirmations.tiff"; path = "Resources/pref-confirmations.tiff"; sourceTree = "<group>"; };
  		11AE5575109CCC950074BDC2 /* irc-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "irc-small.png"; path = "Plugins/Purple Service/irc-small.png"; sourceTree = "<group>"; };
@@ -190,7 +198,7 @@ index 1ef51f738..3bcecf949 100644
  		11BE28DD0FCC7D2B000E6A10 /* AIImageUploaderPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIImageUploaderPlugin.h; path = "Plugins/Image Uploading Plugin/AIImageUploaderPlugin.h"; sourceTree = "<group>"; };
  		11BE28DE0FCC7D2B000E6A10 /* AIImageUploaderPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIImageUploaderPlugin.m; path = "Plugins/Image Uploading Plugin/AIImageUploaderPlugin.m"; sourceTree = "<group>"; };
  		11BE29630FCCA8DA000E6A10 /* ImageUploaderProgress.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ImageUploaderProgress.nib; path = "Plugins/Image Uploading Plugin/ImageUploaderProgress.nib"; sourceTree = "<group>"; };
-@@ -1879,32 +1826,6 @@
+@@ -1879,32 +1825,6 @@
  		11C7CAF00BB58F4100296D7F /* AINudgeBuzzHandlerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AINudgeBuzzHandlerPlugin.h; sourceTree = "<group>"; };
  		11C7CAF10BB58F4100296D7F /* AINudgeBuzzHandlerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AINudgeBuzzHandlerPlugin.m; sourceTree = "<group>"; };
  		11C97DFC0F7D26C200E8DD37 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
@@ -223,7 +231,7 @@ index 1ef51f738..3bcecf949 100644
  		11D915570FFC0E9C00B39713 /* AIImageShackImageUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIImageShackImageUploader.h; path = "Plugins/Image Uploading Plugin/AIImageShackImageUploader.h"; sourceTree = "<group>"; };
  		11D915580FFC0E9C00B39713 /* AIImageShackImageUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIImageShackImageUploader.m; path = "Plugins/Image Uploading Plugin/AIImageShackImageUploader.m"; sourceTree = "<group>"; };
  		11D915700FFC100700B39713 /* AIGenericMultipartImageUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIGenericMultipartImageUploader.h; path = "Plugins/Image Uploading Plugin/AIGenericMultipartImageUploader.h"; sourceTree = "<group>"; };
-@@ -1918,14 +1839,6 @@
+@@ -1918,14 +1838,6 @@
  		11F145C70B546A6D00CA91F6 /* Menu Bar Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Menu Bar Icons"; path = "Resources/Menu Bar Icons"; sourceTree = "<group>"; };
  		11F146090B546C1200CA91F6 /* AIMenuBarIcons.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIMenuBarIcons.h; path = Source/AIMenuBarIcons.h; sourceTree = "<group>"; };
  		11F1460A0B546C1200CA91F6 /* AIMenuBarIcons.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIMenuBarIcons.m; path = Source/AIMenuBarIcons.m; sourceTree = "<group>"; };
@@ -238,7 +246,7 @@ index 1ef51f738..3bcecf949 100644
  		11FC23BF0F768C0900C1C906 /* AIXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIXMLElement.h; path = "Frameworks/Adium Framework/Source/AIXMLElement.h"; sourceTree = "<group>"; };
  		11FC23C00F768C0900C1C906 /* AIXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIXMLElement.m; path = "Frameworks/Adium Framework/Source/AIXMLElement.m"; sourceTree = "<group>"; };
  		31034EFD0C8142680003F5AA /* TestStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestStringAdditions.h; path = UnitTests/TestStringAdditions.h; sourceTree = "<group>"; };
-@@ -3740,8 +3653,6 @@
+@@ -3740,8 +3652,6 @@
  		34FD5BEB07F1F92900687C70 /* it */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
  		34FDD6E305632BFD00F5B30F /* ESFileTransferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ESFileTransferController.h; path = Source/ESFileTransferController.h; sourceTree = "<group>"; };
  		34FDD6E405632BFD00F5B30F /* ESFileTransferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ESFileTransferController.m; path = Source/ESFileTransferController.m; sourceTree = "<group>"; };
@@ -247,7 +255,7 @@ index 1ef51f738..3bcecf949 100644
  		377EC8930AE9525B00CB7BDF /* PSMTabBarControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSMTabBarControl.framework; path = Frameworks/PSMTabBarControl.framework; sourceTree = "<group>"; };
  		3C73F83E04D62A2900A80106 /* AIEmoticonPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIEmoticonPack.h; path = "Frameworks/Adium Framework/Source/AIEmoticonPack.h"; sourceTree = "<group>"; };
  		3C73F83F04D62A2900A80106 /* AIEmoticonPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIEmoticonPack.m; path = "Frameworks/Adium Framework/Source/AIEmoticonPack.m"; sourceTree = "<group>"; };
-@@ -3993,25 +3904,12 @@
+@@ -3993,25 +3903,12 @@
  		4F1CB63C0D640DA40073A1E6 /* get-info-advanced.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "get-info-advanced.tiff"; path = "Resources/get-info-advanced.tiff"; sourceTree = "<group>"; };
  		4F1CB63D0D640DA40073A1E6 /* get-info-events.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "get-info-events.tiff"; path = "Resources/get-info-events.tiff"; sourceTree = "<group>"; };
  		4F1CB64B0D640F4F0073A1E6 /* ContactInfoInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContactInfoInspector.nib; path = Resources/ContactInfoInspector.nib; sourceTree = "<group>"; };
@@ -273,7 +281,7 @@ index 1ef51f738..3bcecf949 100644
  		5A5F601912962D06007A2232 /* AISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AISegmentedControl.h; path = "Frameworks/AIUtilities Framework/Source/AISegmentedControl.h"; sourceTree = "<group>"; };
  		5A5F601A12962D06007A2232 /* AISegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AISegmentedControl.m; path = "Frameworks/AIUtilities Framework/Source/AISegmentedControl.m"; sourceTree = "<group>"; };
  		5A5F8BBB12D560E400019727 /* AIDockNameOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIDockNameOverlay.h; path = "Plugins/Dock Icon Badging/AIDockNameOverlay.h"; sourceTree = "<group>"; };
-@@ -4056,12 +3954,10 @@
+@@ -4056,12 +3953,10 @@
  		5A7642CE11E044BA00E5E0AF /* sk_SK */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sk_SK; path = Resources/sk_SK.lproj/StatusPreferences.nib; sourceTree = "<group>"; };
  		5A7642CF11E044BA00E5E0AF /* sk_SK */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sk_SK; path = Resources/sk_SK.lproj/StatusSortConfiguration.nib; sourceTree = "<group>"; };
  		5A7642D011E044BA00E5E0AF /* sk_SK */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sk_SK; path = "Plugins/WebKit Message View/Resources/sk_SK.lproj/WebKitPreferencesView.nib"; sourceTree = "<group>"; };
@@ -286,7 +294,7 @@ index 1ef51f738..3bcecf949 100644
  		5A80CC86121F5A7A00D0670A /* uk */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = uk; path = Resources/uk.lproj/AppearancePrefs.nib; sourceTree = "<group>"; };
  		5A80CC87121F5A7A00D0670A /* uk */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = uk; path = Resources/uk.lproj/Buttons.strings; sourceTree = "<group>"; };
  		5A80CC88121F5A7A00D0670A /* uk */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = uk; path = "Plugins/Purple Service/Resources/uk.lproj/DCPurpleJabberJoinChatView.nib"; sourceTree = "<group>"; };
-@@ -4493,8 +4389,6 @@
+@@ -4493,8 +4388,6 @@
  		6FB330A20C7235BF00B001A8 /* EKEzvIncomingFileTransfer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = EKEzvIncomingFileTransfer.m; path = Plugins/Bonjour/libezv/Classes/EKEzvIncomingFileTransfer.m; sourceTree = SOURCE_ROOT; };
  		6FB330A30C7235BF00B001A8 /* EKEzvOutgoingFileTransfer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = EKEzvOutgoingFileTransfer.h; path = Plugins/Bonjour/libezv/Classes/EKEzvOutgoingFileTransfer.h; sourceTree = SOURCE_ROOT; };
  		6FB330A40C7235BF00B001A8 /* EKEzvOutgoingFileTransfer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = EKEzvOutgoingFileTransfer.m; path = Plugins/Bonjour/libezv/Classes/EKEzvOutgoingFileTransfer.m; sourceTree = SOURCE_ROOT; };
@@ -295,7 +303,7 @@ index 1ef51f738..3bcecf949 100644
  		7664EAA4162E086A008CF995 /* libffi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libffi.framework; path = Frameworks/libffi.framework; sourceTree = "<group>"; };
  		766ABAB41306D1020049FFB7 /* AIUnreadMessagesTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIUnreadMessagesTooltip.h; path = Source/AIUnreadMessagesTooltip.h; sourceTree = "<group>"; };
  		766ABAB51306D1020049FFB7 /* AIUnreadMessagesTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIUnreadMessagesTooltip.m; path = Source/AIUnreadMessagesTooltip.m; sourceTree = "<group>"; };
-@@ -4502,40 +4396,10 @@
+@@ -4502,40 +4395,10 @@
  		766F66A41ACBDF0D002079F2 /* auth_gtalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = auth_gtalk.h; sourceTree = "<group>"; };
  		76731DE015F90538007728C3 /* libgcrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgcrypt.framework; path = Frameworks/libgcrypt.framework; sourceTree = "<group>"; };
  		76731DE115F90538007728C3 /* libgpgerror.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgpgerror.framework; path = Frameworks/libgpgerror.framework; sourceTree = "<group>"; };
@@ -336,7 +344,15 @@ index 1ef51f738..3bcecf949 100644
  		77D903500B78CF1000B86C42 /* zhm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = zhm; path = "Plugins/Purple Service/zhm"; sourceTree = "<group>"; };
  		7E1E8176063A3EEC00EB00F7 /* AIContextMenuTextView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIContextMenuTextView.h; path = "Frameworks/Adium Framework/Source/AIContextMenuTextView.h"; sourceTree = "<group>"; };
  		7E1E8177063A3EEC00EB00F7 /* AIContextMenuTextView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIContextMenuTextView.m; path = "Frameworks/Adium Framework/Source/AIContextMenuTextView.m"; sourceTree = "<group>"; };
-@@ -4627,13 +4491,6 @@
+@@ -4596,7 +4459,6 @@
+ 		979AA6B914D5A452008730DF /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpurple.framework; path = Frameworks/libpurple.framework; sourceTree = "<group>"; };
+ 		97AF5CD913191DE200550C41 /* AIContactListUserPictureMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AIContactListUserPictureMenuController.h; path = Source/AIContactListUserPictureMenuController.h; sourceTree = "<group>"; };
+ 		97AF5CDA13191DE200550C41 /* AIContactListUserPictureMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AIContactListUserPictureMenuController.m; path = Source/AIContactListUserPictureMenuController.m; sourceTree = "<group>"; };
+-		97AF5CF313191E9A00550C41 /* ContactListChangeUserPictureMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContactListChangeUserPictureMenu.xib; path = Resources/ContactListChangeUserPictureMenu.xib; sourceTree = "<group>"; };
+ 		97E4B4FB13E7490000A8BA53 /* AboutDialog_transp_btm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AboutDialog_transp_btm.png; path = Resources/AboutDialog_transp_btm.png; sourceTree = "<group>"; };
+ 		97E4B4FC13E7490000A8BA53 /* AboutDialog_transp_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AboutDialog_transp_top.png; path = Resources/AboutDialog_transp_top.png; sourceTree = "<group>"; };
+ 		97E4B4FD13E7490000A8BA53 /* Flap_192.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Flap_192.png; path = Resources/Flap_192.png; sourceTree = "<group>"; };
+@@ -4627,13 +4489,6 @@
  		9ECB03E509F2A9D800996F44 /* AIXMLAppender.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIXMLAppender.m; path = Source/AIXMLAppender.m; sourceTree = "<group>"; };
  		9EF0DBF309D944A300FBCC1E /* msg-block-contact.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "msg-block-contact.tiff"; path = "Resources/msg-block-contact.tiff"; sourceTree = "<group>"; };
  		9EF0DBF409D944A300FBCC1E /* msg-unblock-contact.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "msg-unblock-contact.tiff"; path = "Resources/msg-unblock-contact.tiff"; sourceTree = "<group>"; };
@@ -350,7 +366,7 @@ index 1ef51f738..3bcecf949 100644
  		C4243C920638E4EA007AD2D9 /* BGEmoticonMenuPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = BGEmoticonMenuPlugin.h; path = Source/BGEmoticonMenuPlugin.h; sourceTree = "<group>"; };
  		C4243C930638E4EA007AD2D9 /* BGEmoticonMenuPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = BGEmoticonMenuPlugin.m; path = Source/BGEmoticonMenuPlugin.m; sourceTree = "<group>"; };
  		C44BA7800AAB696300C7504F /* SetupAssistantBoxBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = SetupAssistantBoxBackgroundView.h; path = Source/SetupAssistantBoxBackgroundView.h; sourceTree = "<group>"; };
-@@ -4653,7 +4510,6 @@
+@@ -4653,7 +4508,6 @@
  		D1C1FA2514995D98008C94EB /* en_AU */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en_AU; path = Resources/en_AU.lproj/AccountProxy.nib; sourceTree = "<group>"; };
  		D1C1FA2614995D98008C94EB /* en_AU */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en_AU; path = Resources/en_AU.lproj/AIAdvancedInspectorPane.nib; sourceTree = "<group>"; };
  		D1C1FA2714995D98008C94EB /* en_AU */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en_AU; path = "Plugins/Purple Service/Resources/en_AU.lproj/AIFacebookXMPPAccountView.nib"; sourceTree = "<group>"; };
@@ -358,7 +374,7 @@ index 1ef51f738..3bcecf949 100644
  		D1C1FA2914995D98008C94EB /* en_AU */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en_AU; path = Resources/en_AU.lproj/AppearancePrefs.nib; sourceTree = "<group>"; };
  		D1C1FA2A14995D98008C94EB /* en_AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_AU; path = Resources/en_AU.lproj/Buttons.strings; sourceTree = "<group>"; };
  		D1C1FA2B14995D98008C94EB /* en_AU */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en_AU; path = "Plugins/Purple Service/Resources/en_AU.lproj/DCPurpleJabberJoinChatView.nib"; sourceTree = "<group>"; };
-@@ -4746,8 +4602,6 @@
+@@ -4746,8 +4600,6 @@
  		EE147A7F0896B33400A21377 /* OWABSearchWindowController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OWABSearchWindowController.h; path = Source/OWABSearchWindowController.h; sourceTree = "<group>"; };
  		EEC461B4096D68580028632F /* OWSpellingPerContactPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = OWSpellingPerContactPlugin.m; path = Source/OWSpellingPerContactPlugin.m; sourceTree = "<group>"; };
  		EEC461B5096D68580028632F /* OWSpellingPerContactPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = OWSpellingPerContactPlugin.h; path = Source/OWSpellingPerContactPlugin.h; sourceTree = "<group>"; };
@@ -367,7 +383,7 @@ index 1ef51f738..3bcecf949 100644
  		F11B9621051CDB3B0000000E /* AIMessageAliasPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = AIMessageAliasPlugin.h; path = "Plugins/Message Alias Support/AIMessageAliasPlugin.h"; sourceTree = "<group>"; };
  		F11B9622051CDB3B0000000E /* AIMessageAliasPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = AIMessageAliasPlugin.m; path = "Plugins/Message Alias Support/AIMessageAliasPlugin.m"; sourceTree = "<group>"; };
  		F531836F019E40BB01A80165 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-@@ -4967,23 +4821,6 @@
+@@ -4967,23 +4819,6 @@
  			name = Mentions;
  			sourceTree = "<group>";
  		};
@@ -391,7 +407,7 @@ index 1ef51f738..3bcecf949 100644
  		1154F4DA12E1475300B8CA27 /* Log By Account */ = {
  			isa = PBXGroup;
  			children = (
-@@ -5083,37 +4920,6 @@
+@@ -5083,37 +4918,6 @@
  			path = "Plugins/Purple Service/libpurple_extensions";
  			sourceTree = "<group>";
  		};
@@ -429,7 +445,7 @@ index 1ef51f738..3bcecf949 100644
  		19C28FACFE9D520D11CA2CBB /* Products */ = {
  			isa = PBXGroup;
  			children = (
-@@ -5472,7 +5278,6 @@
+@@ -5472,7 +5276,6 @@
  				343EB42208086D9200E27095 /* ESPurpleJabberAccountView.nib */,
  				4BB19298079EE90900DAA523 /* PurpleDefaultsJabber.plist */,
  				63125D7A0A75EBBE00303EE9 /* LiveJournal */,
@@ -437,7 +453,15 @@ index 1ef51f738..3bcecf949 100644
  				818E96A10C16D443007623BD /* AMXMLConsoleController.h */,
  				818E96A20C16D443007623BD /* AMXMLConsoleController.m */,
  				346544D90C8F686B0046ED68 /* AMPurpleJabberXMLConsole.nib */,
-@@ -7136,7 +6941,6 @@
+@@ -5669,7 +5472,6 @@
+ 				34D0F9C90954E70100DCB678 /* AIContactListImagePicker.m */,
+ 				97AF5CD913191DE200550C41 /* AIContactListUserPictureMenuController.h */,
+ 				97AF5CDA13191DE200550C41 /* AIContactListUserPictureMenuController.m */,
+-				97AF5CF313191E9A00550C41 /* ContactListChangeUserPictureMenu.xib */,
+ 			);
+ 			name = "User Icon Changing";
+ 			sourceTree = "<group>";
+@@ -7136,7 +6938,6 @@
  		4BD672C406001B530049CAF7 /* Services */ = {
  			isa = PBXGroup;
  			children = (
@@ -445,7 +469,7 @@ index 1ef51f738..3bcecf949 100644
  				4947F5BB0655E7C400B791E5 /* Bonjour */,
  				4B7F278605440C6200CDFC90 /* Libpurple */,
  			);
-@@ -7315,38 +7119,6 @@
+@@ -7315,38 +7116,6 @@
  			name = Growl;
  			sourceTree = "<group>";
  		};
@@ -484,7 +508,7 @@ index 1ef51f738..3bcecf949 100644
  		5A8A6A46124456B1004965A8 /* Segmented control with menu popup */ = {
  			isa = PBXGroup;
  			children = (
-@@ -8416,23 +8188,6 @@
+@@ -8416,23 +8185,6 @@
  			name = "XML Logging";
  			sourceTree = "<group>";
  		};
@@ -508,7 +532,7 @@ index 1ef51f738..3bcecf949 100644
  		B079F761082808790058B452 /* Source */ = {
  			isa = PBXGroup;
  			children = (
-@@ -8890,9 +8645,6 @@
+@@ -8890,9 +8642,6 @@
  				3485DB6609EBCE7400232CC4 /* ESPurpleJabberAccount.h in Headers */,
  				3485DB6809EBCE7400232CC4 /* DCPurpleJabberJoinChatViewController.h in Headers */,
  				3485DB6B09EBCE7400232CC4 /* ESPurpleJabberAccountViewController.h in Headers */,
@@ -518,7 +542,7 @@ index 1ef51f738..3bcecf949 100644
  				3485DB7609EBCE7400232CC4 /* ESMeanwhileService.h in Headers */,
  				766F66A61ACBDF0D002079F2 /* auth_gtalk.h in Headers */,
  				3485DB7809EBCE7400232CC4 /* ESPurpleMeanwhileAccount.h in Headers */,
-@@ -8962,7 +8714,6 @@
+@@ -8962,7 +8711,6 @@
  				811036250CDE8C2100EC6038 /* adiumPurpleCertificateTrustWarning.h in Headers */,
  				8110362C0CDE8F5800EC6038 /* AIPurpleCertificateTrustWarningAlert.h in Headers */,
  				34B3247A0CE4CCF400158D5F /* PurpleAccountViewController.h in Headers */,
@@ -526,7 +550,7 @@ index 1ef51f738..3bcecf949 100644
  				34EF904B0E2EB17B003E5DC7 /* AIMobileMeService.h in Headers */,
  				34EF90570E2EB1A8003E5DC7 /* AIPurpleMobileMeAccountViewController.h in Headers */,
  				34EF905D0E2EB1C5003E5DC7 /* AIPurpleMobileMeAccount.h in Headers */,
-@@ -9508,7 +9259,6 @@
+@@ -9508,7 +9256,6 @@
  				3485DB6A09EBCE7400232CC4 /* DCPurpleJabberJoinChatView.nib in Resources */,
  				3485DB6D09EBCE7400232CC4 /* ESPurpleJabberAccountView.nib in Resources */,
  				3485DB6E09EBCE7400232CC4 /* PurpleDefaultsJabber.plist in Resources */,
@@ -534,7 +558,7 @@ index 1ef51f738..3bcecf949 100644
  				3485DB7C09EBCE7400232CC4 /* DCPurpleMeanwhileJoinChatView.nib in Resources */,
  				3485DB7F09EBCE7400232CC4 /* ESPurpleMeanwhileAccountView.nib in Resources */,
  				3485DB8009EBCE7400232CC4 /* PurpleDefaultsSametime.plist in Resources */,
-@@ -9528,7 +9278,6 @@
+@@ -9528,7 +9275,6 @@
  				3485DBBB09EBCE7400232CC4 /* ESPurpleZephyrAccountView.nib in Resources */,
  				3485DBBC09EBCE7400232CC4 /* PurpleDefaultsZephyr.plist in Resources */,
  				3485DBC309EBCE7400232CC4 /* PurpleMultilineRequestWindow.nib in Resources */,
@@ -542,7 +566,7 @@ index 1ef51f738..3bcecf949 100644
  				3485DBC409EBCE7400232CC4 /* PurpleSinglelineRequestWindow.nib in Resources */,
  				3485DBD009EBCE8200232CC4 /* Localizable.strings in Resources */,
  				34E036780A75AA4F00394F11 /* DCPurpleOscarJoinChatView.nib in Resources */,
-@@ -9776,18 +9525,12 @@
+@@ -9776,18 +9522,12 @@
  				117866E10EC759B9003E9B97 /* FTProgressResendPressed.tif in Resources */,
  				117866E20EC759B9003E9B97 /* FTProgressResendRollover_Selected.tif in Resources */,
  				117866E30EC759B9003E9B97 /* FTProgressResendRollover.tif in Resources */,
@@ -561,7 +585,15 @@ index 1ef51f738..3bcecf949 100644
  				11A2F10A0FC8FC1A00C3F05C /* AIMessageAlertsAdvancedPreferences.nib in Resources */,
  				11BE29640FCCA8DA000E6A10 /* ImageUploaderProgress.nib in Resources */,
  				112939020FD5AC1B00FA8F53 /* AIConfirmationsAdvancedPreferences.nib in Resources */,
-@@ -10023,9 +9766,6 @@
+@@ -9801,7 +9541,6 @@
+ 				76889DEB12D3CA17007AEF00 /* get-info.tiff in Resources */,
+ 				76889DEF12D3CA40007AEF00 /* Personal.tiff in Resources */,
+ 				1154F50A12E1476900B8CA27 /* AILogByAccountWindow.nib in Resources */,
+-				97AF5CF413191E9A00550C41 /* ContactListChangeUserPictureMenu.xib in Resources */,
+ 				9722ABC813257D7F00CAB486 /* ContactListWindow.xib in Resources */,
+ 				5ADFFE5D133846C300069C1B /* keys.png in Resources */,
+ 				5A799674133C3D6F0005AC6A /* MessageView.xib in Resources */,
+@@ -10023,9 +9762,6 @@
  				3485DB6709EBCE7400232CC4 /* ESPurpleJabberAccount.m in Sources */,
  				3485DB6909EBCE7400232CC4 /* DCPurpleJabberJoinChatViewController.m in Sources */,
  				3485DB6C09EBCE7400232CC4 /* ESPurpleJabberAccountViewController.m in Sources */,
@@ -571,7 +603,7 @@ index 1ef51f738..3bcecf949 100644
  				3485DB7709EBCE7400232CC4 /* ESMeanwhileService.m in Sources */,
  				766F66A51ACBDF0D002079F2 /* auth_gtalk.c in Sources */,
  				3485DB7909EBCE7400232CC4 /* ESPurpleMeanwhileAccount.m in Sources */,
-@@ -10095,7 +9835,6 @@
+@@ -10095,7 +9831,6 @@
  				811036260CDE8C2100EC6038 /* adiumPurpleCertificateTrustWarning.m in Sources */,
  				8110362D0CDE8F5800EC6038 /* AIPurpleCertificateTrustWarningAlert.m in Sources */,
  				34B3247B0CE4CCF400158D5F /* PurpleAccountViewController.m in Sources */,
@@ -579,7 +611,7 @@ index 1ef51f738..3bcecf949 100644
  				34EF904C0E2EB17B003E5DC7 /* AIMobileMeService.m in Sources */,
  				34EF90580E2EB1A8003E5DC7 /* AIPurpleMobileMeAccountViewController.m in Sources */,
  				34EF905E0E2EB1C5003E5DC7 /* AIPurpleMobileMeAccount.m in Sources */,
-@@ -10408,19 +10147,12 @@
+@@ -10408,19 +10143,12 @@
  				4F1CB6320D640D7F0073A1E6 /* AIEventsInspectorPane.m in Sources */,
  				632D859E0DB70FC800040EC7 /* AIMentionEventPlugin.m in Sources */,
  				34EBB2C30DCA8DE500B4CB6E /* AISearchFieldCell.m in Sources */,
@@ -599,7 +631,7 @@ index 1ef51f738..3bcecf949 100644
  				1163F0EC0F6C7A8300F12F5D /* AIURLShortenerPlugin.m in Sources */,
  				11700A350F7E8BE80078D6AB /* AISpecialPasswordPromptController.m in Sources */,
  				112B490A0F82FB1700690E84 /* AIGroupChatStatusTooltipPlugin.m in Sources */,
-@@ -10431,12 +10163,10 @@
+@@ -10431,12 +10159,10 @@
  				1139011C0F85C9450081A418 /* AIURLHandlerPlugin.m in Sources */,
  				11E786810F8860210014612E /* AIJumpControlPlugin.m in Sources */,
  				1121B29A0F896A720047EC66 /* AIContactVisibilityControlPlugin.m in Sources */,
@@ -612,7 +644,7 @@ index 1ef51f738..3bcecf949 100644
  				112939100FD5AE1400FA8F53 /* AIConfirmationsAdvancedPreferences.m in Sources */,
  				11D915720FFC100700B39713 /* AIGenericMultipartImageUploader.m in Sources */,
  				11000D041098863B0096A1E2 /* AIDefaultFontRemovalPlugin.m in Sources */,
-@@ -10449,13 +10179,6 @@
+@@ -10449,13 +10175,6 @@
  				5A5F8BBD12D560E400019727 /* AIDockNameOverlay.m in Sources */,
  				5A17D65D130F76B4002C852F /* AIGradientView.m in Sources */,
  				97AF5CDB13191DE200550C41 /* AIContactListUserPictureMenuController.m in Sources */,
@@ -626,7 +658,7 @@ index 1ef51f738..3bcecf949 100644
  			);
  			runOnlyForDeploymentPostprocessing = 0;
  		};
-@@ -10811,42 +10534,6 @@
+@@ -10811,42 +10530,6 @@
  			name = ESIRCAccountView.nib;
  			sourceTree = "<group>";
  		};
@@ -669,7 +701,7 @@ index 1ef51f738..3bcecf949 100644
  		3402E01A07CB0CEC0044F818 /* ESFileTransferProgressView.nib */ = {
  			isa = PBXVariantGroup;
  			children = (
-@@ -12379,41 +12066,6 @@
+@@ -12379,41 +12062,6 @@
  			name = Localizable.strings;
  			sourceTree = "<group>";
  		};
@@ -709,9 +741,9 @@ index 1ef51f738..3bcecf949 100644
 -			sourceTree = "<group>";
 -		};
  /* End PBXVariantGroup section */
-
+ 
  /* Begin XCBuildConfiguration section */
-@@ -12586,6 +12238,7 @@
+@@ -12586,6 +12234,7 @@
  					"\"$(SRCROOT)/build/Debug\"",
  				);
  				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -719,7 +751,7 @@ index 1ef51f738..3bcecf949 100644
  			};
  			name = Debug;
  		};
-@@ -12600,6 +12253,7 @@
+@@ -12600,6 +12249,7 @@
  				);
  				GCC_PREPROCESSOR_DEFINITIONS = RELEASE_BUILD;
  				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -727,7 +759,7 @@ index 1ef51f738..3bcecf949 100644
  			};
  			name = Release;
  		};
-@@ -12617,6 +12271,7 @@
+@@ -12617,6 +12267,7 @@
  					DEBUG_BUILD,
  				);
  				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -735,7 +767,7 @@ index 1ef51f738..3bcecf949 100644
  			};
  			name = "Release-Debug";
  		};
-@@ -12624,6 +12279,9 @@
+@@ -12624,6 +12275,9 @@
  			isa = XCBuildConfiguration;
  			baseConfigurationReference = 63C7E02A0FAF9BA800B310AC /* Debug.xcconfig */;
  			buildSettings = {
@@ -745,7 +777,7 @@ index 1ef51f738..3bcecf949 100644
  			};
  			name = Debug;
  		};
-@@ -12631,6 +12289,9 @@
+@@ -12631,6 +12285,9 @@
  			isa = XCBuildConfiguration;
  			baseConfigurationReference = 63C7E02B0FAF9BA800B310AC /* Release.xcconfig */;
  			buildSettings = {
@@ -755,7 +787,7 @@ index 1ef51f738..3bcecf949 100644
  			};
  			name = Release;
  		};
-@@ -12638,6 +12299,10 @@
+@@ -12638,6 +12295,10 @@
  			isa = XCBuildConfiguration;
  			baseConfigurationReference = 63C7E02C0FAF9BA800B310AC /* Release-Debug.xcconfig */;
  			buildSettings = {
@@ -778,3 +810,42 @@ index 3d013d338..59acb7e83 100644
  	[ESIRCService registerService];
  	[AILiveJournalService registerService];
  	[ESMSNService registerService];
+diff --git a/Frameworks/AutoHyperlinks Framework/AutoHyperlinks.framework.xcodeproj/project.pbxproj b/Frameworks/AutoHyperlinks Framework/AutoHyperlinks.framework.xcodeproj/project.pbxproj
+index 486d997c7..2be4ed030 100644
+--- a/adium/Frameworks/AutoHyperlinks Framework/AutoHyperlinks.framework.xcodeproj/project.pbxproj	
++++ b/adium/Frameworks/AutoHyperlinks Framework/AutoHyperlinks.framework.xcodeproj/project.pbxproj	
+@@ -405,6 +405,7 @@
+ 			developmentRegion = English;
+ 			hasScannedForEncodings = 1;
+ 			knownRegions = (
++				English,
+ 				en,
+ 			);
+ 			mainGroup = 0867D691FE84028FC02AAC07 /* AIHyperlinks.framework */;
+@@ -623,6 +624,8 @@
+ 			isa = XCBuildConfiguration;
+ 			baseConfigurationReference = 7E0CF31B11769FE700EDC305 /* Release-Debug.xcconfig */;
+ 			buildSettings = {
++				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
++				VALID_ARCHS = x86_64;
+ 			};
+ 			name = "Release-Debug";
+ 		};
+@@ -877,6 +880,8 @@
+ 			isa = XCBuildConfiguration;
+ 			baseConfigurationReference = 7E0CF30C11769F4C00EDC305 /* Debug.xcconfig */;
+ 			buildSettings = {
++				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
++				VALID_ARCHS = x86_64;
+ 			};
+ 			name = Debug;
+ 		};
+@@ -884,6 +889,8 @@
+ 			isa = XCBuildConfiguration;
+ 			baseConfigurationReference = 7E0CF31811769FBD00EDC305 /* Release.xcconfig */;
+ 			buildSettings = {
++				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
++				VALID_ARCHS = x86_64;
+ 			};
+ 			name = Release;
+ 		};
