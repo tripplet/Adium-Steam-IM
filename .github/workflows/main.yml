@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build: 
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest, macOS-10.14]
+        
+    steps:    
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Checkout&Init submodules
+      run: git submodule update --init
+    - name: Build mbedtls
+      run: cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make -j      
+    - name: Install openssl
+      run: brew install openssl
+    - name: Build adium
+      run: git apply adium.patch; cd adium; make -j
+     
