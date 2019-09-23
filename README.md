@@ -21,9 +21,11 @@ Thanks
 1. Checkout this git repository
 2. Init submodules:
    `git submodule update --init`
-3. Compile Adium:
+3. Install openssl (needed for building Adium)
+   `brew install openssl`
+4. Compile Adium:
    `git apply adium.patch; cd adium; make -j`
-4. Compile mbedtls:
+5. Compile mbedtls:
    `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make -j`
-5. Compile the plugin:
+6. Compile the plugin:
    `xcodebuild -configuration Release -project "Steam IM.xcodeproj"`
