@@ -22,4 +22,4 @@ jobs:
     - name: Build adium
       run: git apply adium.patch; cd adium; make -j
     - name: Build
-      run: xcodebuild
+      run: xcodebuild -configuration Release -project "Steam IM.xcodeproj"
