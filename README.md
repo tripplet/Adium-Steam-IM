@@ -22,8 +22,8 @@ Thanks
 2. Init submodules:
    `git submodule update --init`
 3. Compile Adium:
-   `cd adium; make`
+   `git apply adium.patch; cd adium; make -j`
 4. Compile mbedtls:
-   `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="i386;x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make`
+   `cd mbedtls; mkdir build; cd build; cmake -DCMAKE_OSX_ARCHITECTURES="x86_64" -DENABLE_TESTING=OFF -DENABLE_PROGRAMS=OFF ..; make -j`
 5. Compile the plugin:
    `xcodebuild -configuration Release -project "Steam IM.xcodeproj"`
