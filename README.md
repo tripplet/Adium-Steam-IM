@@ -24,7 +24,7 @@ Thanks
    
 3. Install openssl (needed for building Adium)
 
-   `brew install openssl`
+   `brew install openssl cmake`
    
 4. Compile Adium:
 
