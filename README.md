@@ -1,3 +1,5 @@
+# This project is no longer maintained as Adium is no longer actively developed.
+
 Adium-Steam-IM
 ==============
 Adium protocol plugin to support Steam instant messaging
